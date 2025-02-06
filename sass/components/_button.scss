@@ -1,0 +1,41 @@
+button {
+  position: relative;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 135px;
+  height: 35px;
+  color: var(--title-color);
+  text-transform: uppercase;
+
+  .hero & {
+    margin: 30px auto;
+  }
+
+
+  &:hover {
+
+    &:after {
+      bottom: -6px;
+      left: -15px;
+      right: -15px;
+      top: -6px;
+    }
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: 2px solid var(--prim-title-color);
+    -webkit-transition: all .3s cubic-bezier(.7,0,.3,1) 0s;
+    transition: all .3s cubic-bezier(.7,0,.3,1) 0s;
+  }
+}
