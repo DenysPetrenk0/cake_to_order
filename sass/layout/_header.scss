@@ -1,0 +1,43 @@
+.header {
+position: absolute;
+  z-index: 2;
+
+  .navbar {
+    display: block;
+
+    &__logo {
+      position: fixed;
+      left: 46%;
+      top: 9px;
+    }
+  }
+
+  .menu {
+
+    &__nav {
+      display: flex;
+      position: fixed;
+      top: 60px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      li + li {
+        margin-left: 30px;
+      }
+
+      li:nth-child(4) {
+        margin-left: 120px;
+      }
+    }
+
+    &__link {
+      color: var(--title-color);
+    }
+  }
+
+  .contact {
+    position: fixed;
+    top: 60px;
+    right: 50px;
+  }
+}
