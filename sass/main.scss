@@ -2,9 +2,12 @@
 
 @use "./base/_container";
 @use "./base/_common";
+@use "./base/_section";
 
 @use "./layout/_header";
 @use "./layout/_hero";
+@use "./layout/gallery";
+@use "./layout/about_me";
 
 @use "./components/_title";
 @use "./components/_button";
