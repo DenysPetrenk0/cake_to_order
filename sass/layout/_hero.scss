@@ -1,10 +1,13 @@
 .hero {
   position: relative;
   max-width: 1600px;
-  padding-top: 200px;
-  padding-bottom: 200px;
   background: var(--bg-color);
   z-index: 1;
+
+  &__container {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 
   &__background-video {
     position: absolute;
@@ -17,13 +20,28 @@
   }
 
   .content {
-    //position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
     z-index: 1;
+  }
+
+  &__hashtag {
+
+    &__container {
+      position: fixed;
+      bottom: 35px;
+      left: 20px;
+      font-size: 15px;
+      font-weight: 900;
+      line-height: 1.14;
+    }
+
+    &__text {
+      color: var(--prim-title-color);
+    }
   }
 }
 

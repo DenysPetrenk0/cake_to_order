@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cake_to_order</title>
+    <link rel="image/png" href="./assets/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -20,61 +21,106 @@
             </div>
             <ul class="menu__nav">
                 <li class="menu__item">
-                    <a href="#AboutMe" class="menu__link">автор</a>
+                    <a href="#AboutMe" class="menu__link">
+                        роботи
+                        <svg class="menu__link__icon">
+                            <use href="./assets/icon/cherries.svg#cherry"></use>
+                        </svg>
+                    </a>
                 </li>
                 <li class="menu__item">
-                    <a href="#Gallery" class="menu__link">роботи</a>
+                    <a href="#Gallery" class="menu__link">
+                        автор
+                        <svg class="menu__link__icon">
+                            <use href="./assets/icon/cherries.svg#cherry"></use>
+                        </svg>
+                    </a>
                 </li>
                 <li class="menu__item">
-                    <a href="#OrderProcess" class="menu__link">замовити</a>
+                    <a href="#OrderProcess" class="menu__link">
+                        замовити
+                        <svg class="menu__link__icon">
+                            <use href="./assets/icon/cherries.svg#cherry"></use>
+                        </svg>
+                    </a>
                 </li>
                 <li class="menu__item">
-                <a href="#Testimonials" class="menu__link">Відгуки</a>
+                    <a href="#Testimonials" class="menu__link">
+                        відгуки
+                        <svg class="menu__link__icon">
+                            <use href="./assets/icon/cherries.svg#cherry"></use>
+                        </svg>
+                    </a>
                 </li>
                 <li class="menu__item">
-                    <a href="#FAQ" class="menu__link">запитання</a>
+                    <a href="#FAQ" class="menu__link">
+                        запитання
+                        <svg class="menu__link__icon">
+                            <use href="./assets/icon/cherries.svg#cherry"></use>
+                        </svg>
+                    </a>
                 </li>
                 <li class="menu__item">
-                    <a href="#Contact" class="menu__link">Контакти</a>
+                    <a href="#Contact" class="menu__link">
+                        контакти
+                        <svg class="menu__link__icon">
+                            <use href="./assets/icon/cherries.svg#cherry"></use>
+                        </svg>
+                    </a>
                 </li>
             </ul>
         </nav>
         <ul class="contact">
-            <li class="menu__item">
-                <a href="" class="menu__link">+380731862009</a>
+            <li class="menu__contact">
+                <a href="" class="menu__contact__link">
+                    <svg class="menu__contact__link__icon">
+                        <use href="./assets/icon/sprite.svg#mobile"></use>
+                    </svg>
+                    +380731862009
+                </a>
             </li>
             <li class="menu__item">
-                <a href="" class="menu__link">@cake_to_order</a>
+                <a href="" class="menu__contact__link">
+                    <svg class="menu__contact__link__icon">
+                        <use href="./assets/icon/sprite.svg#telegram"></use>
+                    </svg>
+                    @cake_to_order
+                </a>
             </li>
         </ul>
     </header>
     <main>
-        <section id="AboutIntro" class="hero">
+        <section id="AboutIntro" class="hero section">
             <video autoPlay loop muted class="hero__background-video">
                 <source src="./assets/video/hero_bg.mp4" type="video/mp4">
             </video>
-            <div class="container">
+            <div class="hero__container container">
                 <h1 class="hero__title">ТОРТ НА ЗАМОВЛЕННЯ</h1>
                 <h2 class="section__title">Унікальні десерти з любов’ю та майстерністю!</h2>
                 <button type="button">Замовити</button>
             </div>
+            <div class="hero__hashtag__container">
+                <a href="#" class="hero__hashtag__text">#Cake_to_0rder</a>
+            </div>
         </section>
-<!--        <section id="AboutMe section">-->
-<!--            <div class="container">-->
-<!--                <h2 class="section__title">AboutMe</h2>-->
-<!--                &lt;!&ndash;            Коротка історія, як ти почав(-ла) займатися випічкою.&ndash;&gt;-->
-<!--                &lt;!&ndash;            Твоя філософія: що важливо у твоїх десертах (натуральні продукти, унікальні рецепти, індивідуальний підхід).&ndash;&gt;-->
-<!--                &lt;!&ndash;            Фото тебе в процесі роботи&ndash;&gt;-->
-<!--            </div>-->
-<!--        </section>-->
-<!--        <section id="Gallery section">-->
-<!--            <div class="container">-->
-<!--                <h2 class="section__title">Gallery</h2>-->
-<!--                &lt;!&ndash;             Фотогалерея з якісними знімками тортів, тістечок та інших десертів.&ndash;&gt;-->
-<!--                &lt;!&ndash;             Опис кожного виробу: склад, особливості дизайну, можливі варіанти.&ndash;&gt;-->
-<!--                &lt;!&ndash;             Можливість збільшення фото при кліку.&ndash;&gt;-->
-<!--            </div>-->
-<!--        </section>-->
+        <section id="Gallery" class="gallery section">
+            <div class="container">
+                <h2 class="section__title">Gallery</h2>
+                            <!--             Фотогалерея з якісними знімками тортів, тістечок та інших десертів.-->
+                            <!--             Опис кожного виробу: склад, особливості дизайну, можливі варіанти.-->
+                            <!--             Можливість збільшення фото при кліку.-->
+            </div>
+        </section>
+        <section id="AboutMe" class="about_me section">
+            <div class="container">
+                <h2 class="section__title">автор</h2>
+                <p>
+                    Коротка історія, як ти почав(-ла) займатися випічкою.
+                    Твоя філософія: що важливо у твоїх десертах (натуральні продукти, унікальні рецепти, індивідуальний підхід).
+                    Фото тебе в процесі роботи
+                </p>
+            </div>
+        </section>
 <!--        <section id="WhatIOffer section">-->
 <!--            <div class="container">-->
 <!--                <h2 class="section__title">WhatIOffer</h2>-->
@@ -124,7 +170,7 @@
 <!--                &lt;!&ndash;            Карта (якщо є фізична локація).&ndash;&gt;-->
 <!--            </div>-->
 <!--        </section>-->
-<!--    </main>-->
+    </main>
 <!--    <footer class="footer">-->
 <!--        <div class="footer__container">-->
 <!--            <h2 class="hashtag">#hashtag</h2>-->
@@ -147,5 +193,6 @@
 <!--            </ul>-->
 <!--        </div>-->
 <!--    </footer>-->
+    <script type="module" src="./js/main.js"></script>
 </body>
 </html>
