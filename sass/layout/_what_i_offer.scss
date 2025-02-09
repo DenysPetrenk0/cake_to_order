@@ -1,0 +1,16 @@
+.what_i_offer {
+  background: #212121;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+  }
+}

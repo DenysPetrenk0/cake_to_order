@@ -6,8 +6,9 @@
 
 @use "./layout/_header";
 @use "./layout/_hero";
-@use "./layout/gallery";
-@use "./layout/about_me";
+@use "./layout/_gallery";
+@use "./layout/_about_me";
+@use "./layout/_what_i_offer";
 
 @use "./components/_title";
 @use "./components/_button";
