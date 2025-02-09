@@ -1,4 +1,16 @@
 .about_me {
-  padding-top: 200px;
   background: #212121;
+
+  &__container {
+    display: flex;
+  }
+
+  &__video {
+    width: 50%;
+  }
+
+  &__text-box {
+    width: 50%;
+    padding: 10px;
+  }
 }
