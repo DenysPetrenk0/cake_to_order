@@ -219,10 +219,32 @@
         </section>
         <section id="Gallery" class="gallery section">
             <div class="container">
-                <h2 class="section__title">Gallery</h2>
-                            <!--             Фотогалерея з якісними знімками тортів, тістечок та інших десертів.-->
-                            <!--             Опис кожного виробу: склад, особливості дизайну, можливі варіанти.-->
-                            <!--             Можливість збільшення фото при кліку.-->
+                <div class="gallery__content">
+                    <div class="card card1">1</div>
+                    <div class="card card2">2</div>
+                    <div class="card card3">3</div>
+                    <div class="card card4" data-images='["card4/img4-1.jpg", "card4/img4-2.jpg", "card4/img4-3.jpg"]'>
+                        <img src="./assets/img/gallery/card4/img4-1.jpg" alt="baby photo 1">
+                        <img src="./assets/img/gallery/card4/img4-2.jpg" alt="baby photo 2">
+                        <img src="./assets/img/gallery/card4/img4-3.jpg" alt="baby photo 3">
+                    </div>
+                    <div class="card card5" data-images='["card5/img5-1.jpg", "card5/img5-2.jpg", "card5/img5-3.jpg"]'>
+                        <img src="./assets/img/gallery/card5/img5-1.jpg" alt="men photo 1">
+                        <img src="./assets/img/gallery/card5/img5-2.jpg" alt="men photo 2">
+                        <img src="./assets/img/gallery/card5/img5-3.jpg" alt="men photo 3">
+                    </div>
+                    <div class="card card6">6</div>
+                    <div class="card card7">7</div>
+                    <div class="card card8" data-images='["card8/img8-1.jpg", "card8/img8-2.jpg", "card8/img8-3.jpg"]'>
+                        <img src="./assets/img/gallery/card8/img8-1.jpg" alt="wedding photo 1">
+                        <img src="./assets/img/gallery/card8/img8-2.jpg" alt="wedding photo 2">
+                        <img src="./assets/img/gallery/card8/img8-3.jpg" alt="wedding photo 3">
+                    </div>
+                    <div class="card card9">9</div>
+                    <div class="card card10">10</div>
+                    <div class="card card11">11</div>
+                    <div class="card card12">12</div>
+                </div>
             </div>
         </section>
 
@@ -278,6 +300,15 @@
 <!--            </ul>-->
 <!--        </div>-->
 <!--    </footer>-->
+    <div class="backdrop is-hidden">
+        <button class="modal__close">&times;</button>
+        <div class="modal">
+            <img class="modal__image" src="" alt="Gallery Image">
+        </div>
+        <button class="modal__prev">←</button>
+        <button class="modal__next">→</button>
+    </div>
+
     <script type="module" src="./js/main.js"></script>
 </body>
 </html>
