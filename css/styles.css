@@ -288,17 +288,43 @@ card:hover .card img {
 }
 
 .about_me {
-  background: #212121;
+  background: linear-gradient(0deg, #EEE4D5, #A09489);
 }
 .about_me__container {
   display: flex;
+  flex-direction: row-reverse;
 }
 .about_me__video {
   width: 50%;
 }
-.about_me__text-box {
+.about_me__content {
   width: 50%;
   padding: 10px;
+}
+.about_me__content__text {
+  padding: 20px;
+  column-count: 2;
+  column-gap: 40px;
+}
+.about_me__name {
+  font-size: 23px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: var(--prim-title-color);
+}
+.about_me__name__box {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  text-align: center;
+}
+.about_me__img__box {
+  position: relative;
+  max-width: 225px;
+  margin: 0 auto;
 }
 
 .what_i_offer {
@@ -437,6 +463,32 @@ button:after {
 
 .modal__next {
   right: 10px;
+}
+
+.social-links__list {
+  display: flex;
+  justify-content: center;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+.social-links__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social-links__icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--title-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social-links__link:hover .social-links__icon, .social-links__link:focus .social-links__icon {
+  fill: var(--prim-title-color);
 }
 
 /*# sourceMappingURL=styles.css.map */
