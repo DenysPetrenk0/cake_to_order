@@ -1,16 +1,49 @@
 .about_me {
-  background: #212121;
+  background: linear-gradient(0deg, #EEE4D5, #A09489) ;
 
   &__container {
     display: flex;
+    flex-direction: row-reverse;
   }
 
   &__video {
     width: 50%;
   }
 
-  &__text-box {
+  &__content {
     width: 50%;
     padding: 10px;
+
+    &__text {
+      padding: 20px;
+      column-count: 2;
+      column-gap: 40px;
+    }
+  }
+
+  &__name {
+    font-size: 23px;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    line-height: 1.1;
+    text-transform: uppercase;
+    color: var(--prim-title-color);
+
+    &__box  {
+      position: absolute;
+      top: 80%;
+      left: 50%;
+      transform: translate(-50%, 0);
+      text-align: center;
+    }
+  }
+
+  &__img {
+
+    &__box{
+      position: relative;
+      max-width: 225px;
+      margin: 0 auto;
+    }
   }
 }
