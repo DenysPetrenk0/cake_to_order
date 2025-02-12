@@ -1,5 +1,5 @@
 .about_me {
-  background: linear-gradient(0deg, #EEE4D5, #A09489) ;
+  background: var(--bg-second-color);
 
   &__container {
     display: flex;
@@ -7,7 +7,13 @@
   }
 
   &__video {
-    width: 50%;
+    width: 460px;
+
+    &__container{
+      display: flex;
+      justify-content: center;
+      width: 50%;
+    }
   }
 
   &__content {
@@ -15,18 +21,27 @@
     padding: 10px;
 
     &__text {
-      padding: 20px;
+      padding: 10px;
       column-count: 2;
       column-gap: 40px;
+
+      & p {
+        font-family: "Noto Sans Display", serif;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 1.6;
+        color: var(--title-color);
+      }
     }
   }
 
   &__name {
-    font-size: 23px;
-    font-weight: 900;
+    font-size: 45px;
+    font-family: "Great Vibes", serif;
+    font-weight: 700;
+    font-style: italic;
     letter-spacing: 0.06em;
     line-height: 1.1;
-    text-transform: uppercase;
     color: var(--prim-title-color);
 
     &__box  {
@@ -39,6 +54,7 @@
   }
 
   &__img {
+    border-radius: 10px;
 
     &__box{
       position: relative;
