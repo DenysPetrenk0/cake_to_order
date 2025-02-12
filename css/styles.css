@@ -1,6 +1,7 @@
 :root {
   --text-second-color: #757575;
   --bg-color: #212121;
+  --bg-second-color: #000000;
   --link-color: #2196F3;
   --title-color: #ffffff;
   --prim-title-color: #d99714;
@@ -16,7 +17,7 @@
 body {
   font-family: Noto Sans Display, serif;
   margin: 0;
-  color: var(--text-color);
+  color: var(--title-color);
 }
 
 h1,
@@ -204,16 +205,26 @@ ul {
 .card img:nth-child(1) {
   top: 0;
   left: 0;
-  z-index: 3;
+  z-index: 5;
 }
 .card img:nth-child(2) {
   top: -5px;
   left: -5px;
-  z-index: 2;
+  z-index: 4;
 }
 .card img:nth-child(3) {
   top: -10px;
   left: -10px;
+  z-index: 3;
+}
+.card img:nth-child(4) {
+  top: -15px;
+  left: -15px;
+  z-index: 2;
+}
+.card img:nth-child(5) {
+  top: -20px;
+  left: -20px;
   z-index: 1;
 }
 card:hover .card img {
@@ -288,13 +299,18 @@ card:hover .card img {
 }
 
 .about_me {
-  background: linear-gradient(0deg, #EEE4D5, #A09489);
+  background: var(--bg-second-color);
 }
 .about_me__container {
   display: flex;
   flex-direction: row-reverse;
 }
 .about_me__video {
+  width: 460px;
+}
+.about_me__video__container {
+  display: flex;
+  justify-content: center;
   width: 50%;
 }
 .about_me__content {
@@ -302,16 +318,24 @@ card:hover .card img {
   padding: 10px;
 }
 .about_me__content__text {
-  padding: 20px;
+  padding: 10px;
   column-count: 2;
   column-gap: 40px;
 }
+.about_me__content__text p {
+  font-family: "Noto Sans Display", serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--title-color);
+}
 .about_me__name {
-  font-size: 23px;
-  font-weight: 900;
+  font-size: 45px;
+  font-family: "Great Vibes", serif;
+  font-weight: 700;
+  font-style: italic;
   letter-spacing: 0.06em;
   line-height: 1.1;
-  text-transform: uppercase;
   color: var(--prim-title-color);
 }
 .about_me__name__box {
@@ -320,6 +344,9 @@ card:hover .card img {
   left: 50%;
   transform: translate(-50%, 0);
   text-align: center;
+}
+.about_me__img {
+  border-radius: 10px;
 }
 .about_me__img__box {
   position: relative;
