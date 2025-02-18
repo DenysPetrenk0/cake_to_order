@@ -177,7 +177,7 @@ ul {
 }
 
 .gallery {
-  background: var(--bg-color);
+  background: var(--bg-second-color);
 }
 .gallery__content {
   display: grid;
@@ -356,7 +356,7 @@ card:hover .card img {
 }
 
 .what_i_offer {
-  background: #212121;
+  background: var(--bg-second-color);
 }
 .what_i_offer__list {
   display: flex;
@@ -381,14 +381,14 @@ card:hover .card img {
   left: 50%;
   transform: translate(-50%, -50%) scale(1.1);
   opacity: 0;
-  font-size: 20px;
+  font-size: 14px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   display: inline-block;
   color: var(--title-color);
   padding: 12px 20px;
-  background: var(--bg-color);
-  transition: opacity 0.4s cubic-bezier(0.7, 0, 0.3, 1) 0s, transform 0.4s cubic-bezier(0.7, 0, 0.3, 1) 0.4s;
+  background: var(--prim-title-color);
+  transition: transform 0.4s cubic-bezier(0.7, 0, 0.3, 1) 0s, opacity 0.4s cubic-bezier(0.7, 0, 0.3, 1) 0s, -webkit-transform 0.4s cubic-bezier(0.7, 0, 0.3, 1) 0s;
 }
 .what_i_offer__link:hover .what_i_offer__link__text {
   transform: translate(-50%, -50%) scale(1);
