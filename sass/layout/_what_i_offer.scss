@@ -13,4 +13,34 @@
     justify-content: center;
     width: 25%;
   }
+
+  &__link {
+    position: relative;
+    transition: scale .4s cubic-bezier(.7,0,.3,1) 0s;
+
+    &:hover {
+      scale: 1.1;
+    }
+
+    &__text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(1.1);
+      opacity: 0;
+      font-size: 20px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      display: inline-block;
+      color: var(--title-color);
+      padding: 12px 20px;
+      background: var(--bg-color);
+      transition: opacity .4s cubic-bezier(.7,0,.3,1) 0s, transform .4s cubic-bezier(.7,0,.3,1) .4s;
+
+      .what_i_offer__link:hover & {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+      }
+    }
+  }
 }

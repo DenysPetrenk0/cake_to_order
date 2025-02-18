@@ -1,11 +1,12 @@
 .gallery {
-  background: #757575;
+  background: var(--bg-color);
 
   &__content {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
     gap: 10px;
+    padding-top: 10px;
   }
 }
 

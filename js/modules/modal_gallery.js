@@ -36,6 +36,7 @@ export function initModal() {
 	closeButton.addEventListener("click", closeModal);
 	prevButton.addEventListener("click", showPrevImage);
 	nextButton.addEventListener("click", showNextImage);
+	modalImage.addEventListener('click', showNextImage);
 	backDrop.addEventListener("click", (e) => {
 		if (e.target.classList.contains("modal__content")) {
 			closeModal();

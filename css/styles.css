@@ -177,13 +177,14 @@ ul {
 }
 
 .gallery {
-  background: #757575;
+  background: var(--bg-color);
 }
 .gallery__content {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
   gap: 10px;
+  padding-top: 10px;
 }
 
 .card {
@@ -330,7 +331,7 @@ card:hover .card img {
   color: var(--title-color);
 }
 .about_me__name {
-  font-size: 45px;
+  font-size: 50px;
   font-family: "Great Vibes", serif;
   font-weight: 700;
   font-style: italic;
@@ -366,6 +367,32 @@ card:hover .card img {
   align-items: center;
   justify-content: center;
   width: 25%;
+}
+.what_i_offer__link {
+  position: relative;
+  transition: scale 0.4s cubic-bezier(0.7, 0, 0.3, 1) 0s;
+}
+.what_i_offer__link:hover {
+  scale: 1.1;
+}
+.what_i_offer__link__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.1);
+  opacity: 0;
+  font-size: 20px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  display: inline-block;
+  color: var(--title-color);
+  padding: 12px 20px;
+  background: var(--bg-color);
+  transition: opacity 0.4s cubic-bezier(0.7, 0, 0.3, 1) 0s, transform 0.4s cubic-bezier(0.7, 0, 0.3, 1) 0.4s;
+}
+.what_i_offer__link:hover .what_i_offer__link__text {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
 }
 
 .hero__title {
@@ -460,6 +487,7 @@ button:after {
   max-height: 50%;
   object-fit: contain;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .modal__close {
