@@ -1,0 +1,145 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+}
+
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__what_i_offer {
+    width: 70vw;
+    height: 70vh;
+  }
+
+  &__image {
+    width: auto;
+    height: auto;
+    max-width: 50%;
+    max-height: 50%;
+    object-fit: contain;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  &__close {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__prev,
+  &__next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  &__prev {
+    left: 10px;
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  &__next {
+    right: 10px;
+  }
+
+  &__icon {
+    fill: var(--title-color);
+    width: 25px;
+    height: 25px;
+
+    .backdrop a:hover & {
+      scale: 1.1;
+      fill: var(--prim-title-color);
+    }
+  }
+
+  .content {
+    display: flex;
+  }
+
+  .description {
+    position: relative;
+    background: var(--title-color);
+    border-radius: 10px;
+    color: #212121;
+    margin-right: 5px;
+    padding: 140px 60px;
+
+    &__title {
+      font-family: "Roboto Mono", serif;
+      font-size: 30px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .3em;
+      margin-bottom: 50px;
+      text-align: left;
+    }
+
+    &__prime__text {
+      font-family: "PT Serif", serif;
+      font-size: 14px;
+      line-height: 24px;
+      color: var(--bg-color);
+      margin-bottom: 30px;
+    }
+
+    &__second__text {
+      font-family: "Great Vibes", serif;
+      font-size: 21px;
+      line-height: 24px;
+      color: var(--text-second-color);
+    }
+
+    &__price {
+
+      &__box {
+        display: flex;
+        position: absolute;
+        top: 5%;
+        right: 0;
+        align-items: baseline;
+      }
+
+      &__text {
+        font-family: "Roboto Mono", serif;
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--text-second-color);
+        margin-right: 10px;
+      }
+
+      &__value {
+        font-family: "Roboto Mono", serif;
+        font-size: 30px;
+        font-weight: 700;
+        color: var(--prim-title-color);
+        margin-right: 10px;
+      }
+    }
+  }
+}

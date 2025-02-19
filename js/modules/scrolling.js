@@ -1,9 +1,15 @@
 export function initSmoothScroll() {
 	const sections = document.querySelectorAll(".section");
 	const navLinks = document.querySelectorAll(".menu__link");
+	const backdrop = document.querySelector(".backdrop");
 	let isScrolling = false;
 
 	document.addEventListener("wheel", (event) => {
+		if (backdrop.querySelector(".modal")) {
+			event.preventDefault();
+			document.body.style.overflow = "hidden";
+			return;
+		}
 		if (isScrolling) return;
 
 		event.preventDefault();
@@ -27,7 +33,6 @@ export function initSmoothScroll() {
 
 	const observer = new IntersectionObserver((entries) => {
 		entries.forEach((entry) => {
-			console.log(entry.isIntersecting)
 			if (entry.isIntersecting) {
 				navLinks.forEach((link) => link.classList.remove("active"));
 				const activeLink = document.querySelector(`.menu__link[href="#${entry.target.id}"]`);
