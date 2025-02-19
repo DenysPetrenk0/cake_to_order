@@ -1,22 +1,31 @@
 export const initModalWhatIOffer = ({image, title, text, secondText, price}) => {
 	const backdrop = document.querySelector(".backdrop");
 	backdrop.innerHTML = `
-	<div class="modal">
-		<button class="modal__close">&times;</button>
+	<a href="#" class="modal__close">
+		<svg class="modal__icon">
+			<use href="./assets/icon/cross.svg#cross"></use>
+		</svg>
+	</a>
+	<div class="modal modal__what_i_offer">
 		<div class="content">
-			<img src="${image}" alt="${title}">
 			<div class="description">
-				<h2 class="title">${title}</h2>
-				<p class="prime__text">${text}</p>
-				<p class="second__text">${secondText}</p>
-				<p class="price">${price}</p>
+				<h2 class="description__title">${title}</h2>
+				<p class="description__prime__text">${text}</p>
+				<p class="description__second__text">${secondText}</p>
+				<div class="description__price__box">
+					<p class="description__price__text">ціна: </p>
+					<p class="description__price__value">${price}</p>
+					<p class="description__price__text">грн/кг</p>
+				</div>
 			</div>
+			<img class="modal__image" src="${image}" alt="${title}">
 		</div>
 	</div>
 	`;
 	backdrop.classList.remove("is-hidden");
 
-	backdrop.querySelector(".modal__close").addEventListener("click", () => {
+	backdrop.querySelector(".modal__close").addEventListener("click", (event) => {
+		event.preventDefault();
 		backdrop.classList.add("is-hidden");
 		backdrop.innerHTML = "";
 	});

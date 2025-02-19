@@ -9,12 +9,24 @@ export const initModalGallery = () => {
 		currentIndex = index;
 
 		backDrop.innerHTML = `
-			<button class="modal__close">&times;</button>
+			<a href="#" class="modal__close">
+				<svg class="modal__icon">
+					<use href="./assets/icon/cross.svg#cross"></use>
+				</svg>
+			</a>
 			<div class="modal">
 				<img class="modal__image" src="${images[currentIndex]}" alt="Gallery Image">
+				<a href="#" class="modal__prev">
+					<svg class="modal__icon">
+						<use href="./assets/icon/modalArrow.svg#modal-arrow"></use>
+					</svg>
+				</a>
+				<a href="#" class="modal__next">
+					<svg class="modal__icon">
+						<use href="./assets/icon/modalArrow.svg#modal-arrow"></use>
+					</svg>
+				</a>
 			</div>
-			<button class="modal__prev">←</button>
-			<button class="modal__next">→</button>
 		`;
 
 		backDrop.classList.remove("is-hidden");
@@ -25,17 +37,20 @@ export const initModalGallery = () => {
 		const prevButton = backDrop.querySelector(".modal__prev");
 		const nextButton = backDrop.querySelector(".modal__next");
 
-		function closeModal() {
+		function closeModal(event) {
+			event.preventDefault();
 			backDrop.classList.add("is-hidden");
 			backDrop.innerHTML = "";
 		}
 
-		function showNextImage() {
+		function showNextImage(event) {
+			event.preventDefault();
 			currentIndex = (currentIndex + 1) % images.length;
 			modalImage.src = images[currentIndex];
 		}
 
-		function showPrevImage() {
+		function showPrevImage(event) {
+			event.preventDefault();
 			currentIndex = (currentIndex - 1 + images.length) % images.length;
 			modalImage.src = images[currentIndex];
 		}

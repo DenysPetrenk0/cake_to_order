@@ -331,7 +331,7 @@ card:hover .card img {
   color: var(--title-color);
 }
 .about_me__name {
-  font-size: 50px;
+  font-size: 67px;
   font-family: "Great Vibes", serif;
   font-weight: 700;
   font-style: italic;
@@ -341,7 +341,7 @@ card:hover .card img {
 }
 .about_me__name__box {
   position: absolute;
-  top: 80%;
+  top: 62%;
   left: 50%;
   transform: translate(-50%, 0);
   text-align: center;
@@ -479,7 +479,10 @@ button:after {
   justify-content: center;
   align-items: center;
 }
-
+.modal__what_i_offer {
+  width: 70vw;
+  height: 70vh;
+}
 .modal__image {
   width: auto;
   height: auto;
@@ -489,35 +492,91 @@ button:after {
   border-radius: 10px;
   cursor: pointer;
 }
-
 .modal__close {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 5%;
+  right: 5%;
   background: none;
   border: none;
-  font-size: 24px;
-  color: white;
   cursor: pointer;
 }
-
-.modal__prev,
-.modal__next {
+.modal__prev, .modal__next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.6);
   border: none;
   padding: 10px;
   cursor: pointer;
 }
-
 .modal__prev {
   left: 10px;
+  transform: translateY(-50%) rotate(180deg);
 }
-
 .modal__next {
   right: 10px;
+}
+.modal__icon {
+  fill: var(--title-color);
+  width: 25px;
+  height: 25px;
+}
+.backdrop a:hover .modal__icon {
+  scale: 1.1;
+  fill: var(--prim-title-color);
+}
+.modal .content {
+  display: flex;
+}
+.modal .description {
+  position: relative;
+  background: var(--title-color);
+  border-radius: 10px;
+  color: #212121;
+  margin-right: 5px;
+  padding: 140px 60px;
+}
+.modal .description__title {
+  font-family: "Roboto Mono", serif;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  margin-bottom: 50px;
+  text-align: left;
+}
+.modal .description__prime__text {
+  font-family: "PT Serif", serif;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--bg-color);
+  margin-bottom: 30px;
+}
+.modal .description__second__text {
+  font-family: "Great Vibes", serif;
+  font-size: 21px;
+  line-height: 24px;
+  color: var(--text-second-color);
+}
+.modal .description__price__box {
+  display: flex;
+  position: absolute;
+  top: 5%;
+  right: 0;
+  align-items: baseline;
+}
+.modal .description__price__text {
+  font-family: "Roboto Mono", serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-second-color);
+  margin-right: 10px;
+}
+.modal .description__price__value {
+  font-family: "Roboto Mono", serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--prim-title-color);
+  margin-right: 10px;
 }
 
 .social-links__list {
