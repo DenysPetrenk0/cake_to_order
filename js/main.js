@@ -28,3 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	});
 });
+
+document.querySelector("#scrollButtonOfferSection").addEventListener("click", () => {
+	document.querySelector("#OrderProcess").scrollIntoView({behavior: "smooth"});
+});
