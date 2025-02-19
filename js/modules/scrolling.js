@@ -1,5 +1,6 @@
 export function initSmoothScroll() {
 	const sections = document.querySelectorAll(".section");
+	const navLinks = document.querySelectorAll(".menu__link");
 	let isScrolling = false;
 
 	document.addEventListener("wheel", (event) => {
@@ -19,9 +20,25 @@ export function initSmoothScroll() {
 			sections[currentIndex - 1].scrollIntoView({ behavior: "smooth" });
 		}
 
-		// Встановлюємо таймаут, щоб запобігти багатьом подіям одночасно
 		setTimeout(() => {
 			isScrolling = false;
-		}, 800); // Час має відповідати швидкості анімації `scrollIntoView`
+		}, 800);
 	}, { passive: false });
+
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			console.log(entry.isIntersecting)
+			if (entry.isIntersecting) {
+				navLinks.forEach((link) => link.classList.remove("active"));
+				const activeLink = document.querySelector(`.menu__link[href="#${entry.target.id}"]`);
+
+				if (activeLink) {
+					activeLink.classList.add("active");
+				}
+			}
+		});
+		},
+		{rootMargin: "-10% 0px -10% 0px", threshold: 0.5}
+	);
+	sections.forEach((section) => observer.observe(section));
 }
