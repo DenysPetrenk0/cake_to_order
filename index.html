@@ -102,7 +102,7 @@
             <div class="hero__container container">
                 <h1 class="hero__title">ТОРТ НА ЗАМОВЛЕННЯ</h1>
                 <h2 class="section__title">Унікальні десерти з любов’ю та майстерністю!</h2>
-                <button type="button">Замовити</button>
+                <button type="button" id="scrollButtonOfferSection">Замовити</button>
             </div>
             <div class="hero__hashtag__container">
                 <a href="#" class="hero__hashtag__text">#Cake_to_0rder</a>
@@ -350,59 +350,107 @@
                 </div>
             </div>
         </section>
+        <section id="Testimonials" class="testimonials section">
+            <div class="container">
+                <ul class="testimonials__list">
+                    <li class="testimonials__item">
+                        <img src="./assets/img/testimonials/testimonials/photo1.jpg" alt="testimonials"
+                             class="testimonials__item__img">
+                        <div class="testimonials__item__container">
+                            <div class="testimonials__item__author__container">
+                                <img src="./assets/img/testimonials/author/Grace.png" alt=""
+                                     class="testimonials__item__author__photo">
+                                <p class="testimonials__item__author__name">author name</p>
+                            </div>
+                            <div class="testimonials__item__text__container">
+                                <p class="testimonials__item__author__text">Коротка історія, як ти почав(-ла) займатися випічкою.
+                                    Твоя філософія: що важливо у твоїх десертах (натуральні продукти, унікальні рецепти, індивідуальний підхід).
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="testimonials__item">
+                        <img src="./assets/img/testimonials/testimonials/photo1.jpg" alt="testimonials"
+                             class="testimonials__item__img">
+                        <div class="testimonials__item__container">
+                            <div class="testimonials__item__author__container">
+                                <img src="./assets/img/testimonials/author/Grace.png" alt=""
+                                     class="testimonials__item__author__photo">
+                                <p class="testimonials__item__author__name">author name</p>
+                            </div>
+                            <div class="testimonials__item__text__container">
+                                <p class="testimonials__item__author__text">Коротка історія, як ти почав(-ла) займатися випічкою.
+                                    Твоя філософія: що важливо у твоїх десертах (натуральні продукти, унікальні рецепти, індивідуальний підхід).
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="testimonials__item">
+                        <img src="./assets/img/testimonials/testimonials/photo1.jpg" alt="testimonials"
+                             class="testimonials__item__img">
+                        <div class="testimonials__item__container">
+                            <div class="testimonials__item__author__container">
+                                <img src="./assets/img/testimonials/author/Grace.png" alt=""
+                                     class="testimonials__item__author__photo">
+                                <p class="testimonials__item__author__name">author name</p>
+                            </div>
+                            <div class="testimonials__item__text__container">
+                                <p class="testimonials__item__author__text">Коротка історія, як ти почав(-ла) займатися випічкою.
+                                    Твоя філософія: що важливо у твоїх десертах (натуральні продукти, унікальні рецепти, індивідуальний підхід).
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="testimonials__button__container">
+                    <a href="#" class="testimonials__button testimonials__button__prev">
+                        <svg class="testimonials__button__icon">
+                            <use href="./assets/icon/modalArrow.svg#modal-arrow"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="testimonials__button testimonials__button__next">
+                        <svg class="testimonials__button__icon">
+                            <use href="./assets/icon/modalArrow.svg#modal-arrow"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
 
-<!--        <section id="Testimonials section">-->
-<!--            <div class="container">-->
-<!--                <h2 class="section__title">Testimonials</h2>-->
-<!--                &lt;!&ndash;            Реальні відгуки + фото замовлених десертів.&ndash;&gt;-->
-<!--                &lt;!&ndash;            Можна вставити Instagram-сторіз із клієнтськими відгуками.&ndash;&gt;-->
-<!--                &lt;!&ndash;            Карусель із текстовими відгуками.&ndash;&gt;-->
-<!--            </div>-->
-
-<!--        </section>-->
-<!--        <section id="OrderProcess section">-->
-<!--            <div class="container">-->
-<!--                <h2 class="section__title">OrderProcess</h2>-->
-<!--                &lt;!&ndash;            Оберіть десерт та дизайн&ndash;&gt;-->
-<!--                &lt;!&ndash;            Заповніть форму замовлення&ndash;&gt;-->
-<!--                &lt;!&ndash;            Узгодимо деталі (дата, склад, доставка)&ndash;&gt;-->
-<!--                &lt;!&ndash;            Оплата (завдаток або повна сума)&ndash;&gt;-->
-<!--                &lt;!&ndash;            Отримання замовлення 🎁&ndash;&gt;-->
-<!--                &lt;!&ndash;            Можна зробити це як таймлайн із іконками.&ndash;&gt;-->
-<!--            </div>-->
-<!--        </section>-->
-<!--        <section id="Contact section">-->
-<!--            <div class="container">-->
-<!--                <h2 class="section__title">Contact</h2>-->
-<!--                &lt;!&ndash;            Форма замовлення (Ім’я, телефон, вид десерту, дата) 📋&ndash;&gt;-->
-<!--                &lt;!&ndash;            Кнопка "Написати в Telegram/WhatsApp"&ndash;&gt;-->
-<!--                &lt;!&ndash;            Телефон, email, соцмережі 📲&ndash;&gt;-->
-<!--                &lt;!&ndash;            Карта (якщо є фізична локація).&ndash;&gt;-->
-<!--            </div>-->
-<!--        </section>-->
+        </section>
+        <section id="OrderProcess" class="section">
+            <div class="container">
+                <h2 class="section__title">OrderProcess</h2>
+                <!--            Оберіть десерт та дизайн-->
+                <!--            Заповніть форму замовлення-->
+                <!--            Узгодимо деталі (дата, склад, доставка)-->
+                <!--            Оплата (завдаток або повна сума)-->
+                <!--            Отримання замовлення 🎁-->
+                <!--            Можна зробити це як таймлайн із іконками.-->
+            </div>
+        </section>
     </main>
-<!--    <footer class="footer">-->
-<!--        <div class="footer__container">-->
-<!--            <h2 class="hashtag">#hashtag</h2>-->
-<!--            <ul class="social__list">-->
-<!--                <li class="social__item">-->
-<!--                    <a href="" class="social__link">Facebook</a>-->
-<!--                </li>-->
-<!--                <li class="social__item">-->
-<!--                    <a href="" class="social__link">Instagram</a>-->
-<!--                </li>-->
-<!--                <li class="social__item">-->
-<!--                    <a href="" class="social__link">Telegram</a>-->
-<!--                </li>-->
-<!--                <li class="social__item">-->
-<!--                    <a href="" class="social__link">TikTok</a>-->
-<!--                </li>-->
-<!--                <li class="social__item">-->
-<!--                    <a href="" class="social__link">Instagram</a>-->
-<!--                </li>-->
-<!--            </ul>-->
-<!--        </div>-->
-<!--    </footer>-->
+    <footer id="Contact" class="footer">
+        <div class="container">
+            <h2 class="hashtag">#hashtag</h2>
+            <ul class="social__list">
+                <li class="social__item">
+                    <a href="" class="social__link">Facebook</a>
+                </li>
+                <li class="social__item">
+                    <a href="" class="social__link">Instagram</a>
+                </li>
+                <li class="social__item">
+                    <a href="" class="social__link">Telegram</a>
+                </li>
+                <li class="social__item">
+                    <a href="" class="social__link">TikTok</a>
+                </li>
+                <li class="social__item">
+                    <a href="" class="social__link">Instagram</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
     <div class="backdrop is-hidden"></div>
 
     <script type="module" src="./js/main.js"></script>

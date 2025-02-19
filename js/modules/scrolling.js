@@ -1,5 +1,5 @@
 export function initSmoothScroll() {
-	const sections = document.querySelectorAll(".section");
+	const sections = document.querySelectorAll(".section, footer");
 	const navLinks = document.querySelectorAll(".menu__link");
 	const backdrop = document.querySelector(".backdrop");
 	let isScrolling = false;
