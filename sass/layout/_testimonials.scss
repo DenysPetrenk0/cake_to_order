@@ -2,20 +2,22 @@
   position: relative;
   background: var(--bg-second-color);
 
-  .container {
-    max-width: 80%;
+  &__container {
+    width: 100%;
+    max-width: 1200px;
+    overflow: hidden;
   }
 
   &__list {
     display: flex;
-    margin-top: 100px;
+    margin-top: 60px;
   }
 
   &__item {
+    min-width: calc((100% - 40px) / 3);
     display: flex;
-    flex-basis: calc((100% - 40px) / 3);
     flex-direction: row-reverse;
-    margin-right: 40px;
+    margin-right: 20px;
 
     &__container {
       width: 50%;
@@ -56,7 +58,7 @@
       width: 90%;
     }
 
-    &__prev {
+    &__next {
       transform: rotate(180deg);
     }
 

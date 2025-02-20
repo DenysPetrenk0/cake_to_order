@@ -1,3 +1,5 @@
+import {startSlide, stopSlide} from "./slider.js";
+
 export function initSmoothScroll() {
 	const sections = document.querySelectorAll(".section, footer");
 	const navLinks = document.querySelectorAll(".menu__link");
@@ -34,11 +36,17 @@ export function initSmoothScroll() {
 	const observer = new IntersectionObserver((entries) => {
 		entries.forEach((entry) => {
 			if (entry.isIntersecting) {
+				const id = entry.target.id;
 				navLinks.forEach((link) => link.classList.remove("active"));
-				const activeLink = document.querySelector(`.menu__link[href="#${entry.target.id}"]`);
+				const activeLink = document.querySelector(`.menu__link[href="#${id}"]`);
 
 				if (activeLink) {
 					activeLink.classList.add("active");
+				}
+				if (id === "Testimonials") {
+					startSlide();
+				} else {
+					stopSlide();
 				}
 			}
 		});
