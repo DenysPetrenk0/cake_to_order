@@ -417,15 +417,39 @@
             </div>
 
         </section>
-        <section id="OrderProcess" class="section">
+        <section id="OrderProcess" class="order_process section">
             <div class="container">
-                <h2 class="section__title">OrderProcess</h2>
-                <!--            Оберіть десерт та дизайн-->
-                <!--            Заповніть форму замовлення-->
-                <!--            Узгодимо деталі (дата, склад, доставка)-->
-                <!--            Оплата (завдаток або повна сума)-->
-                <!--            Отримання замовлення 🎁-->
-                <!--            Можна зробити це як таймлайн із іконками.-->
+                <h2 class="order_process__title">Бажаєте зробити замовлення</h2>
+                <p class="order_process__title__second">Вкажіть своє ім'я, контактну інформацію. Ми зв'яжемось з Вами, якомога швидше!</p>
+                <form action="#" class="order_process__form">
+                    <div class="order_process__form__box">
+                        <label class="order_process__form__field">
+                            <input type="text" class="order_process__form__input" name="name" placeholder="ім'я">
+                        </label>
+                        <label class="order_process__form__field">
+                            <input type="text" class="order_process__form__input" name="last_name"
+                                   placeholder="прізвище">
+                        </label>
+                        <label class="order_process__form__field">
+                            <select name="communication" id="form_communication" class="order_process__form__input">
+                                <option value="" selected disabled>Оберіть зв'язку</option>
+                                <option value="tel">телефон</option>
+                                <option value="instagram">instagram</option>
+                                <option value="viber">viber</option>
+                                <option value="telegram">telegram</option>
+                                <option value="discord">discord</option>
+                            </select>
+                        </label>
+                        <label class="order_process__form__field">
+                            <input type="tel" class="order_process__form__input" name="contact" placeholder="телефон">
+                        </label>
+                    </div>
+                    <label class="order_process__form__field">
+                        <textarea class="order_process__form__input" name="contact"
+                                  placeholder="опишіть в декількох словах, що бажаєте замовити (необов'язково)"></textarea>
+                    </label>
+                    <button type="button" id="">Замовити</button>
+                </form>
             </div>
         </section>
     </main>
