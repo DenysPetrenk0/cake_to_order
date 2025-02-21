@@ -48,6 +48,7 @@ export function initSmoothScroll() {
 				} else {
 					stopSlide();
 				}
+				document.querySelector(".hero__hashtag__container").style.display = id === "Contact" ? "none" : "block";
 			}
 		});
 		},
