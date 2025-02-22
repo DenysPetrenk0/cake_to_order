@@ -421,7 +421,7 @@
             <div class="container">
                 <h2 class="order_process__title">Бажаєте зробити замовлення</h2>
                 <p class="order_process__title__second">Вкажіть своє ім'я, контактну інформацію. Ми зв'яжемось з Вами, якомога швидше!</p>
-                <form action="#" class="order_process__form">
+                <form action="#" id="orderForm" class="order_process__form">
                     <div class="order_process__form__box">
                         <label class="order_process__form__field">
                             <input type="text" class="order_process__form__input" name="name" placeholder="ім'я">
@@ -441,14 +441,15 @@
                             </select>
                         </label>
                         <label class="order_process__form__field">
-                            <input type="tel" class="order_process__form__input" name="contact" placeholder="телефон">
+                            <input type="tel" id="input_contact" class="order_process__form__input" name="contact"
+                                   placeholder="телефон">
                         </label>
                     </div>
                     <label class="order_process__form__field">
-                        <textarea class="order_process__form__input" name="contact"
+                        <textarea class="order_process__form__input" name="description"
                                   placeholder="опишіть в декількох словах, що бажаєте замовити (необов'язково)"></textarea>
                     </label>
-                    <button type="button" id="">Замовити</button>
+                    <button type="submit">Замовити</button>
                 </form>
             </div>
         </section>

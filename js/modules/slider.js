@@ -51,7 +51,7 @@ slide.addEventListener("transitionend", () => {
 });
 
 const moveNextSlide = (event) => {
-	event.preventDefault();
+	if (event) event.preventDefault();
 	slides = getSlide();
 
 	if (index >= slides.length - 1) return;

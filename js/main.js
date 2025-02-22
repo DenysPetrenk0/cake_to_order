@@ -2,9 +2,12 @@ import {initSmoothScroll} from "./modules/scrolling.js";
 import {initModalGallery} from "./modules/modalGallery.js";
 import {initModalWhatIOffer} from "./modules/modalWhatIOffer.js";
 import {products} from "../data/products.js";
+import {setOrder, setupContactPlaceholder} from "./modules/form.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-	initSmoothScroll()
+	initSmoothScroll();
+	setupContactPlaceholder();
+	setOrder();
 
 	const openModal = initModalGallery();
 	const basePath = "./assets/img/gallery/";
