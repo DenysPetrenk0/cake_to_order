@@ -10,29 +10,32 @@
 
   &__list {
     display: flex;
-    margin-top: 60px;
+    margin-top: 40px;
+    height: 470px;
   }
 
   &__item {
-    min-width: calc((100% - 40px) / 3);
+    min-width: calc((100% - 20px) / 2);
     display: flex;
     flex-direction: row-reverse;
     margin-right: 20px;
 
     &__container {
-      width: 50%;
-      background: var(--text-second-color);
-      padding: 10px;
+      width: 40%;
+      background: var(--bg-color);
+      padding: 20px;
     }
 
     &__img {
-      width: 50%;
+      width: 60%;
     }
 
     &__author {
 
       &__photo {
         margin-right: 10px;
+        border-radius: 50%;
+        width: 54px;
       }
 
       &__container {
@@ -66,6 +69,14 @@
       height: 30px;
       width: 30px;
       fill: var(--title-color);
+
+      .testimonials__button:hover & {
+        fill: var(--prim-title-color)
+      }
+    }
+
+    &:hover {
+      scale: 1.1;
     }
   }
 }

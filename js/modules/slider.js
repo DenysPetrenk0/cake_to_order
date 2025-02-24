@@ -3,8 +3,8 @@ const slide = document.querySelector(".testimonials__list");
 const prevBtn = document.querySelector(".testimonials__button__prev");
 const nextBtn = document.querySelector(".testimonials__button__next");
 
-const interval = 3000;
-const transition = "transform 1.5s ease-in-out";
+const interval = 4000;
+const transition = `transform 2s ease-in-out`;
 
 let slides = document.querySelectorAll(".testimonials__item");
 let index = 1;
@@ -19,7 +19,7 @@ lastSlide.setAttribute("id", "last-slide");
 slide.append(firstSlide);
 slide.prepend(lastSlide);
 
-const slideWidth = slides[index].clientWidth;
+const slideWidth = slides[index].clientWidth + 20;
 
 const slideTransform = () => `translateX(${-slideWidth * index}px)`;
 const getSlide = () => document.querySelectorAll(".testimonials__item");
