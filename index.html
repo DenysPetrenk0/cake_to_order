@@ -17,11 +17,29 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <div class="loader">
+        <div class="loader__logo">
+            <img src="./assets/img/logo.png" alt="logo">
+        </div>
+        <div class="loader__item">
+            <svg class="loader__item__icon">
+                <use href="./assets/icon/cakes.svg#cake1"></use>
+            </svg>
+        </div>
+        <div class="loader__item">
+            <img class="loader__item__logo" src="./assets/img/logo.png" alt="logo">
+        </div>
+        <div class="loader__item">
+            <svg class="loader__item__icon">
+                <use href="./assets/icon/cakes.svg#cake2"></use>
+            </svg>
+        </div>
+    </div>
     <header class="header">
         <nav class="navbar">
             <div class="navbar__logo">
                 <a href="./index.html" class="logo">
-                    <img src="./assets/img/logo.png" alt="" width="100" height="100">
+                    <img src="./assets/img/logo.png" alt="logo">
                 </a>
             </div>
             <ul class="menu__nav">
@@ -100,9 +118,17 @@
                 <source src="./assets/video/hero_bg.mp4" type="video/mp4">
             </video>
             <div class="hero__container container">
-                <h1 class="hero__title">ТОРТ НА ЗАМОВЛЕННЯ</h1>
-                <h2 class="section__title">Унікальні десерти з любов’ю та майстерністю!</h2>
-                <button type="button" id="scrollButtonOfferSection">Замовити</button>
+                <svg class="hero__icon hero__icon__left">
+                    <use href="./assets/icon/cakes.svg#cake1"></use>
+                </svg>
+                <div class="hero__content">
+                    <h1 class="hero__title">ТОРТ НА ЗАМОВЛЕННЯ</h1>
+                    <h2 class="hero__sub__title">Унікальні десерти з любов’ю та майстерністю!</h2>
+                    <button type="button" id="scrollButtonOfferSection">Замовити</button>
+                </div>
+                <svg class="hero__icon hero__icon__right">
+                    <use href="./assets/icon/cakes.svg#cake2"></use>
+                </svg>
             </div>
             <div class="hero__hashtag__container">
                 <a href="#" class="hero__hashtag__text">#Cake_to_0rder</a>
@@ -111,13 +137,13 @@
         <section id="WhatIOffer" class="what_i_offer section">
             <div class="container">
                 <ul class="what_i_offer__list">
-                    <li class="what_i_offer__item">
+                    <li class="what_i_offer__item what_i_offer__item__left">
                         <a href="" class="what_i_offer__link" data-product="trifle">
                             <p class="what_i_offer__link__text">трайфли</p>
                             <img src="./assets/img/whatIOffer/1.jpg" alt="trifle" class="what_i_offer__img">
                         </a>
                     </li>
-                    <li class="what_i_offer__item">
+                    <li class="what_i_offer__item what_i_offer__item__left">
                         <a href="" class="what_i_offer__link" data-product="women">
                             <p class="what_i_offer__link__text">жіночі</p>
                             <img src="./assets/img/whatIOffer/2.jpg" alt="women" class="what_i_offer__img">
@@ -135,13 +161,13 @@
                             <img src="./assets/img/whatIOffer/4.jpg" alt="festiv" class="what_i_offer__img">
                         </a>
                     </li>
-                    <li class="what_i_offer__item">
+                    <li class="what_i_offer__item what_i_offer__item__left">
                         <a href="" class="what_i_offer__link" data-product="wedding">
                             <p class="what_i_offer__link__text">весільні</p>
                             <img src="./assets/img/whatIOffer/5.jpg" alt="wedding" class="what_i_offer__img">
                         </a>
                     </li>
-                    <li class="what_i_offer__item">
+                    <li class="what_i_offer__item what_i_offer__item__left">
                         <a href="" class="what_i_offer__link" data-product="easter">
                             <p class="what_i_offer__link__text">дитячі</p>
                             <img src="./assets/img/whatIOffer/7.jpg" alt="easter" class="what_i_offer__img">
@@ -609,5 +635,8 @@
     </footer>
     <div class="backdrop is-hidden"></div>
     <script type="module" src="./js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+    <script src="./js/animations.js"></script>
 </body>
 </html>

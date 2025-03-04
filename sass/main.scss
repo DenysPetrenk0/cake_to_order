@@ -12,8 +12,8 @@
 @use "./layout/_testimonials";
 @use "./layout/_order_process";
 @use "./layout/_footer";
+@use "./layout/_loader";
 
-@use "./components/_title";
 @use "./components/_button";
-@use "./components/modal";
+@use "./components/_modal";
 @use "./components/_social-links";
