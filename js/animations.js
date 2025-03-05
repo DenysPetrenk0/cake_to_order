@@ -2,36 +2,36 @@ gsap.registerPlugin(ScrollTrigger);
 
 const tlLoader = gsap.timeline();
 
-tlLoader
-	.set('.loader__item', {yPercent: -100})
-	.set('.loader__logo', {opacity: 0})
-	.to('.loader__item', {
-		yPercent: 0,
-		duration: 0.5,
-		stagger: 0.25
-	})
-	.to('.loader__item', {
-		yPercent: 100,
-		duration: 0.5,
-		stagger: 0.25
-	})
-	.to('.loader__logo', {
-		opacity: 1,
-		duration: 1,
-		scale: 1.2
-	})
-	.set('.loader__item', {
-		yPercent: -100
-	})
-	.to('.loader__logo', {
-		opacity: 0,
-		duration: 1,
-		scale: 0.8
-	})
-	.to('.loader', {
-		yPercent: -100,
-		duration: 1
-	}, '-=0.2')
+// tlLoader
+// 	.set('.loader__item', {yPercent: -100})
+// 	.set('.loader__logo', {opacity: 0})
+// 	.to('.loader__item', {
+// 		yPercent: 0,
+// 		duration: 0.5,
+// 		stagger: 0.25
+// 	})
+// 	.to('.loader__item', {
+// 		yPercent: 100,
+// 		duration: 0.5,
+// 		stagger: 0.25
+// 	})
+// 	.to('.loader__logo', {
+// 		opacity: 1,
+// 		duration: 1,
+// 		scale: 1.2
+// 	})
+// 	.set('.loader__item', {
+// 		yPercent: -100
+// 	})
+// 	.to('.loader__logo', {
+// 		opacity: 0,
+// 		duration: 1,
+// 		scale: 0.8
+// 	})
+// 	.to('.loader', {
+// 		yPercent: -100,
+// 		duration: 1
+// 	}, '-=0.2')
 
 gsap.to('.hero__title', {
 	scrollTrigger: {
@@ -145,4 +145,23 @@ ScrollTrigger.create({
 	end: 'bottom center',
 	onEnter: animateAboutMe,
 	onEnterBack: animateAboutMe
+})
+
+const card1 = gsap.utils.toArray('.card img');
+function animationGallery () {
+	gsap.set(card1, {opacity: 0})
+
+	gsap.to(card1, {
+		opacity: 1,
+		duration: 0.3,
+		stagger: 0.1
+	})
+}
+
+ScrollTrigger.create({
+	trigger: '#Gallery',
+	start: 'top center',
+	end: 'bottom center',
+	onEnter: animationGallery,
+	onEnterBack: animationGallery
 })
