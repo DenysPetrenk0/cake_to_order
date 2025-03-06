@@ -1,4 +1,4 @@
-import {startSlide, stopSlide} from "./slider.js";
+// import {startSlide, stopSlide} from "./slider.js";
 
 export function initSmoothScroll() {
 	const sections = document.querySelectorAll(".section, footer");
@@ -43,11 +43,11 @@ export function initSmoothScroll() {
 				if (activeLink) {
 					activeLink.classList.add("active");
 				}
-				if (id === "Testimonials") {
-					startSlide();
-				} else {
-					stopSlide();
-				}
+				// if (id === "Testimonials") {
+				// 	startSlide();
+				// } else {
+				// 	stopSlide();
+				// }
 				document.querySelector(".hero__hashtag__container").style.display = id === "Contact" ? "none" : "block";
 			}
 		});

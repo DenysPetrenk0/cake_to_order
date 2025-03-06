@@ -1,13 +1,15 @@
 import {initSmoothScroll} from "./modules/scrolling.js";
 import {initModalGallery} from "./modules/modalGallery.js";
 import {initModalWhatIOffer} from "./modules/modalWhatIOffer.js";
+import {initModalHeaderMenu} from "./modules/modalHeaderMenu.js";
 import {products} from "../data/products.js";
 import {setOrder, setupContactPlaceholder} from "./modules/form.js";
+import {startBackgroundChange} from "./modules/heroBackground.js"
 
 document.addEventListener("DOMContentLoaded", () => {
 	initSmoothScroll();
 	setupContactPlaceholder();
-	setOrder();
+	// setOrder();
 
 	const openModal = initModalGallery();
 	const basePath = "./assets/img/gallery/";
@@ -30,8 +32,15 @@ document.addEventListener("DOMContentLoaded", () => {
 			initModalWhatIOffer(product);
 		});
 	});
+
+	document.querySelector("#menuBtn").addEventListener("click", () => {
+		initModalHeaderMenu();
+	})
 });
 
 document.querySelector("#scrollButtonOfferSection").addEventListener("click", () => {
 	document.querySelector("#OrderProcess").scrollIntoView({behavior: "smooth"});
 });
+
+window.addEventListener("load", startBackgroundChange);
+window.addEventListener("resize", startBackgroundChange);

@@ -1,43 +1,55 @@
 .hero {
   position: relative;
-  max-width: 1600px;
+  max-width: 100%;
   background: var(--bg-second-color);
   z-index: 1;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+  }
+
+  &.fade::before {
+    opacity: 0;
+  }
+
+  &__background-video {
+    display: none;
+  }
 
   &__container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     padding-top: 200px;
     padding-bottom: 200px;
   }
 
-  &__background-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
   &__title {
-    margin: 30px auto;
-    width: 696px;
-    text-align: center;
-    font-weight: 900;
-    font-size: 60px;
+    font-size: 30px;
     line-height: 1.6;
     color: var(--prim-title-color);
+    margin: 10px auto;
+    text-align: center;
+    font-weight: 900;
     position: relative;
   }
 
   &__sub__title {
     margin: auto;
-    width: 696px;
     text-align: center;
-    font-size: 36px;
+    font-size: 15px;
     line-height: 1.2;
     font-weight: bold;
     color: var(--title-color);
@@ -45,18 +57,6 @@
     .hero  & {
       position: relative;
     }
-  }
-
-  &__icon {
-    width: 100px;
-    height: 100px;
-    fill: var(--prim-title-color);
-    position: relative;
-    z-index: 1;
-  }
-
-  &__content {
-    margin: 0 100px;
   }
 
   &__hashtag {
@@ -72,6 +72,58 @@
 
     &__text {
       color: var(--prim-title-color);
+    }
+  }
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+    fill: var(--prim-title-color);
+  }
+
+  @media screen and (min-width: 768px) {
+    &__title {
+      font-size: 50px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    &__background-video {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &__container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__title {
+      font-size: 60px;
+      margin: 30px auto;
+    }
+
+    &__sub__title {
+      font-size: 36px;
+    }
+
+    &__content {
+      margin: 0 100px;
+    }
+
+    &__icon {
+      width: 100px;
+      height: 100px;
+      fill: var(--prim-title-color);
+      position: relative;
+      z-index: 1;
     }
   }
 }
