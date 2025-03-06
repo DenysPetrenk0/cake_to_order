@@ -142,4 +142,33 @@
       }
     }
   }
+
+  &__menu {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item {
+    margin-bottom: 30px;
+  }
+
+  &__nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__link {
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--prim-title-color);
+
+    &:focus {
+      color: var(--title-color);
+    }
+  }
 }

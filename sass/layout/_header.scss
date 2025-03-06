@@ -1,103 +1,157 @@
 .header {
-position: absolute;
+  position: relative;
   z-index: 99;
+  width: 100%;
+
+  .menu {
+    &_btn {
+      background: transparent;
+      border: none;
+      position: absolute;
+      left: 80%;
+      top: 20px;
+
+      &:focus .menu_btn__icon {
+        scale: 1.1;
+      }
+
+
+      &__icon {
+        fill: var(--prim-title-color);
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
 
   .navbar {
     display: block;
 
     &__logo {
-      position: fixed;
+      position: absolute;
       width: 100px;
       height: 100px;
-      left: 46%;
-      top: 9px;
+      left: 1%;
+      top: 1%;
     }
   }
 
-  .menu {
 
-    &__nav {
-      display: flex;
-      position: fixed;
-      top: 60px;
-      left: 50%;
-      transform: translate(-50%, -50%);
-
-      li + li {
-        margin-left: 30px;
-      }
-
-      li:nth-child(4) {
-        margin-left: 120px;
-      }
-    }
-
-    &__link {
-      position: relative;
-      font-size: 13px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 1.14;
-      text-transform: uppercase;
-      color: var(--title-color);
-
-      &:hover,
-      &.active {
-        color: var(--text-second-color);
-
-        & .menu__link__icon {
-          opacity: 1;
-          transform: translate(-50%, -7px);;
-        }
-      }
-
-      &__icon {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translate(-50%, -20px);
-        width: 25px;
-        height: 25px;
-        opacity: 0;
-        transition: opacity 0.3s ease, transform 0.3s ease;
-        z-index: -1;
-      }
-    }
-
-    &__contact {
-      margin-bottom: 10px;
-
-      &__link {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 1.14;
-        color: var(--title-color);
-
-        &:hover {
-          color: var(--prim-title-color);
-
-          & .menu__contact__link__icon {
-            fill: var(--prim-title-color);
+      @media screen and (max-width: 767px) {
+        .menu {
+          &__nav{
+            display: none;
           }
         }
-
-        &__icon {
-          width: 17px;
-          height: 17px;
-          fill: var(--title-color);
-          margin-right: 5px;
+        .contact {
+          display: none;
         }
       }
-    }
-  }
 
-  .contact {
-    position: fixed;
-    top: 50px;
-    right: 50px;
+      @media screen and (min-width: 767px) {
+        .navbar {
+          &__logo {
+            position: fixed;
+            left: 46%;
+            top: 9px;
+          }
+        }
+        .menu {
+
+          &_btn {
+            display: none !important;
+          }
+
+          &__nav {
+            display: flex;
+            position: fixed;
+            top: 60px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            li + li {
+              margin-left: 30px;
+            }
+
+            li:nth-child(4) {
+              margin-left: 120px;
+            }
+          }
+
+          &__link {
+            position: relative;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 1.14;
+            text-transform: uppercase;
+            color: var(--title-color);
+
+            &:hover,
+            &.active {
+              color: var(--text-second-color);
+
+              & .menu__link__icon {
+                opacity: 1;
+                transform: translate(-50%, -7px);;
+              }
+            }
+
+            &__icon {
+              position: absolute;
+              top: 0;
+              left: 50%;
+              transform: translate(-50%, -20px);
+              width: 25px;
+              height: 25px;
+              opacity: 0;
+              transition: opacity 0.3s ease, transform 0.3s ease;
+              z-index: -1;
+            }
+          }
+
+          &__contact {
+            margin-bottom: 10px;
+
+            &__link {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              font-size: 15px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 1.14;
+              color: var(--title-color);
+
+              &:hover {
+                color: var(--prim-title-color);
+
+                & .menu__contact__link__icon {
+                  fill: var(--prim-title-color);
+                }
+              }
+
+              &__icon {
+                width: 17px;
+                height: 17px;
+                fill: var(--title-color);
+                margin-right: 5px;
+              }
+            }
+         }
+      }
+        .contact {
+          position: fixed;
+          top: 150px;
+          right: 43%;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+      .contact {
+        position: fixed;
+        top: 50px;
+        right: 50px;
+      }
   }
 }
