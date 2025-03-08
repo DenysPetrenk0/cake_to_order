@@ -18,7 +18,9 @@ export const initModalWhatIOffer = ({image, title, text, secondText, price}) => 
 					<p class="description__price__text">грн/кг</p>
 				</div>
 			</div>
-			<img class="modal__image" src="${image}" alt="${title}">
+			<div class="modal__image__box">
+				<img class="modal__image" src="${image}" alt="${title}">			
+			</div>
 		</div>
 	</div>
 	`;
