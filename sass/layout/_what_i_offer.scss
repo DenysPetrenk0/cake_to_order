@@ -4,14 +4,15 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-
+    justify-content: space-around;
   }
 
   &__item {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 25%;
+    max-width: 190px;
+    width: 50%;
   }
 
   &__link {
@@ -41,6 +42,21 @@
         transform: translate(-50%, -50%) scale(1);
         opacity: 1;
       }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+
+    &__item {
+      max-width: 200px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+
+    &__item {
+      width: 25%;
+      max-width: 100%;
     }
   }
 }

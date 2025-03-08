@@ -6,37 +6,21 @@
   height: 100vh;
   background: rgba(0, 0, 0, 0.8);
   z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-
 }
 
 .modal {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  &__what_i_offer {
-    width: 70vw;
-    height: 70vh;
-  }
 
   &__image {
-    width: auto;
-    height: auto;
-    max-width: 50%;
-    max-height: 50%;
-    object-fit: contain;
-    border-radius: 10px;
-    cursor: pointer;
+    display: none;
   }
 
   &__close {
@@ -78,8 +62,76 @@
     }
   }
 
-  .content {
+  @media screen and (min-width: 480px) {
+    &__menu {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__item {
+      margin-bottom: 30px;
+    }
+
+    &__nav{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__link {
+      font-size: 23px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 1.14;
+      text-transform: uppercase;
+      color: var(--prim-title-color);
+
+      &:focus {
+        color: var(--title-color);
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .content {
+      display: flex;
+    }
+
+    .description {
+      width: 50%;
+    }
+
+    &__image {
+      display: block;
+      object-fit: contain;
+      border-radius: 10px;
+      cursor: pointer;
+
+      &__box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        border-radius: 10px;
+        background: var(--text-second-color);
+      }
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__what_i_offer {
+      width: 70vw;
+      height: 70vh;
+    }
   }
 
   .description {
@@ -116,7 +168,6 @@
     }
 
     &__price {
-
       &__box {
         display: flex;
         position: absolute;
@@ -143,32 +194,4 @@
     }
   }
 
-  &__menu {
-    display: flex;
-    justify-content: center;
-  }
-
-  &__item {
-    margin-bottom: 30px;
-  }
-
-  &__nav{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  &__link {
-    font-size: 23px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1.14;
-    text-transform: uppercase;
-    color: var(--prim-title-color);
-
-    &:focus {
-      color: var(--title-color);
-    }
-  }
 }
