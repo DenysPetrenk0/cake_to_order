@@ -9,7 +9,7 @@ import {startBackgroundChange} from "./modules/heroBackground.js"
 document.addEventListener("DOMContentLoaded", () => {
 	initSmoothScroll();
 	setupContactPlaceholder();
-	// setOrder();
+	setOrder();
 
 	const openModal = initModalGallery();
 	const basePath = "./assets/img/gallery/";

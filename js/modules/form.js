@@ -18,14 +18,50 @@ export const setupContactPlaceholder = () => {
 	});
 };
 
+const closeModal = (event) => {
+	const backDrop = document.querySelector(".backdrop");
+	event.preventDefault();
+	backDrop.classList.add("is-hidden");
+	backDrop.innerHTML = "";
+}
+
+const showResModal = (text) => {
+	const backDrop = document.querySelector(".backdrop");
+
+	backDrop.innerHTML = `
+		<a href="#" class="modal__close">
+			<svg class="modal__icon">
+				<use href="./assets/icon/cross.svg#cross"></use>
+			</svg>
+		</a>
+		<p class="modal__alert__text">${text}</p>
+		<button type="submit" id="modalCloseBtn">Добре</button>
+	`;
+	backDrop.classList.remove("is-hidden");
+
+	const closeBtn = backDrop.querySelector(".modal__close");
+	const okBtn = backDrop.querySelector("#modalCloseBtn");
+
+	closeBtn.addEventListener("click", closeModal);
+	okBtn.addEventListener("click", closeModal);
+}
+
 export const setOrder = () => {
 	document.getElementById("orderForm").addEventListener("submit", async function(event) {
 		event.preventDefault();
 
+		const name = this.querySelector("[name='name']").value.trim();
+		const lastName = this.querySelector("[name='last_name']").value.trim();
+		const contact = this.querySelector("[name='contact']").value.trim();
+		const communication = this.querySelector("[name='communication']").value.trim();
+
+		if (!name || !lastName || !contact || !communication) {
+			showResModal("Будь ласка, заповніть всі обов'язкові поля!");
+			return;
+		}
+
 		const botToken = "token";
 		const chatId = "id";
-
-		console.log(this)
 		const formData = new FormData(this);
 
 		const text = `
@@ -38,6 +74,7 @@ export const setOrder = () => {
 
 		const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
 
+
 		try	{
 			const response = await fetch(url, {
 				method: 'POST',
@@ -46,14 +83,14 @@ export const setOrder = () => {
 			});
 
 			if (response.ok) {
-				alert('Замовлення відправлено!');
+				showResModal("Замовлення відправлено успішно!");
 				this.reset();
 			} else {
-				alert("'Помилка при відправленні. Спробуйте ще раз.'");
+				showResModal("Помилка при відправленні. Спробуйте ще раз.");
 			}
 
 		} catch (error) {
-			alert("помилка");
+			showResModal("Помилка при відправленні. Спробуйте перевірити вірність заповнення усіх полів")
 		}
 	});
 };

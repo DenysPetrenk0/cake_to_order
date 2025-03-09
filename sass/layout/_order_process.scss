@@ -1,31 +1,8 @@
 .order_process {
   background: var(--bg-second-color);
 
-  &__title {
-    font-family: "Roboto Mono", serif;
-    font-size: 30px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.3em;
-    margin-top: 30px;
-    margin-bottom: 10px;
-    text-align: center;
-    color: var(--prim-title-color);
-
-    &__second {
-      font-family: "PT Serif", serif;
-      font-size: 14px;
-      line-height: 24px;
-      color: var(--text-second-color);
-      margin-bottom: 30px;
-      text-align: center;
-    }
-  }
-
   &__form {
     margin: 0 auto;
-    width: 700px;
-    padding: 20px;
 
     &__input {
       border: none;
@@ -48,26 +25,64 @@
       }
     }
 
-    &__field {
-      min-width: calc((100% - 40px) / 2);
-      margin-bottom: 50px;
-      margin-right: 20px;
-    }
-
-    &__box {
-      display: flex;
-      flex-wrap: wrap;
-      margin-right: -20px;
-    }
-
     & textarea {
       height: 100px;
       resize: none;
     }
 
+    &__box {
+      display: flex;
+      flex-direction: column;
+    }
+
     button {
       margin: 20px auto 0;
+    }
 
+    @media screen and (min-width: 480px) {
+
+    }
+
+    @media screen and (min-width: 768px) {
+
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 700px;
+      padding: 20px;
+
+      &__field {
+        min-width: calc((100% - 40px) / 2);
+        margin-bottom: 50px;
+        margin-right: 20px;
+      }
+
+      &__box {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-right: -20px;
+      }
+    }
+  }
+
+  &__title {
+    font-family: "Roboto Mono", serif;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: var(--prim-title-color);
+
+    &__second {
+      font-family: "PT Serif", serif;
+      font-size: 14px;
+      line-height: 24px;
+      color: var(--text-second-color);
+      margin-bottom: 30px;
+      text-align: center;
     }
   }
 }
