@@ -2,50 +2,6 @@
   position: relative;
   background: var(--bg-second-color);
 
-  &__container {
-    width: 100%;
-    max-width: 1200px;
-    overflow: hidden;
-  }
-
-  &__list {
-    display: flex;
-    margin-top: 40px;
-    height: 470px;
-  }
-
-  &__item {
-    min-width: calc((100% - 20px) / 2);
-    display: flex;
-    flex-direction: row-reverse;
-    margin-right: 20px;
-
-    &__container {
-      width: 40%;
-      background: var(--bg-color);
-      padding: 20px;
-    }
-
-    &__img {
-      width: 60%;
-    }
-
-    &__author {
-
-      &__photo {
-        margin-right: 10px;
-        border-radius: 50%;
-        width: 54px;
-      }
-
-      &__container {
-        display: flex;
-        align-items: center;
-        margin-bottom: 30px;
-      }
-    }
-  }
-
   &__button {
     display: flex;
     justify-content: center;
@@ -77,6 +33,77 @@
 
     &:hover {
       scale: 1.1;
+    }
+  }
+
+  &__container {
+    width: 100%;
+    max-width: 1200px;
+    overflow: hidden;
+  }
+
+  &__list {
+    display: flex;
+    margin-top: 40px;
+    height: 470px;
+  }
+
+  @media screen and (min-width: 480px) {
+    &__container {
+      max-width: 480px;
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &__container {
+      max-width: 768px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    &__container {
+      max-width: 1200px;
+    }
+
+    &__list {
+      display: flex;
+      margin-top: 40px;
+      height: 470px;
+    }
+
+    &__item {
+      min-width: calc((100% - 20px) / 2);
+      margin-right: 20px;
+
+      &__container {
+        width: 40%;
+        background: var(--bg-color);
+        padding: 20px;
+      }
+
+      &__img {
+        width: 60%;
+      }
+
+      &__author {
+
+        &__photo {
+          margin-right: 10px;
+          border-radius: 50%;
+          width: 54px;
+        }
+
+        &__container {
+          display: flex;
+          align-items: center;
+          margin-bottom: 30px;
+        }
+      }
     }
   }
 }

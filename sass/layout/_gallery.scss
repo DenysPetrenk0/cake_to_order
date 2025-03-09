@@ -2,129 +2,173 @@
   background: var(--bg-second-color);
 
   &__content {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    gap: 10px;
-    padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: - 5px;
+    margin-bottom: - 5px;
   }
-}
 
-.card {
-  position: relative;
-  cursor: pointer;
-  border-radius: 10px;
-  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
-  margin: 10px;
+  .card {
+    flex-basis: calc((100% - 15px) / 3);
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+
+  &__img {
+    display: block !important;
+  }
 
   img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
-    border: 1px solid rgba(0, 0, 0, 0.3);
-
-    &:nth-child(1) {
-      top: 0;
-      left: 0;
-      z-index: 5;
-    }
-
-    &:nth-child(2) {
-      top: -5px;
-      left: -5px;
-      z-index: 4;
-    }
-
-    &:nth-child(3) {
-      top: -10px;
-      left: -10px;
-      z-index: 3;
-    }
-
-    &:nth-child(4) {
-      top: -15px;
-      left: -15px;
-      z-index: 2;
-    }
-
-    &:nth-child(5) {
-      top: -20px;
-      left: -20px;
-      z-index: 1;
-    }
-
-    card:hover & {
-      transform: scale(1.05);
+    &:not(:first-child) {
+      display: none;
     }
   }
-}
 
-.card1 {
-  grid-column-start: 1;
-  grid-row-start: 2;
-}
+  @media screen and (min-width: 768px) {
+    &__content {
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: - 5px;
+      margin-bottom: - 5px;
+    }
 
-.card2 {
-  grid-column-start: 1;
-  grid-row-start: 3;
-}
+    .card {
+      flex-basis: calc((100% - 20px) / 4);
+      margin-right: 5px;
+      margin-bottom: 5px;
+    }
+  }
 
-.card3 {
-  grid-column-start: 1;
-  grid-row-start: 4;
-}
+  @media screen and (min-width: 1200px) {
+    .card {
+      position: relative;
+      cursor: pointer;
+      border-radius: 10px;
+      box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
+      margin: 10px;
 
-.card4 {
-  grid-row: span 2 / span 2;
-  grid-column-start: 2;
-  grid-row-start: 1;
-}
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        transition: transform 0.3s ease-in-out;
+        border: 1px solid rgba(0, 0, 0, 0.3);
 
-.card5 {
-  grid-row: span 3 / span 3;
-  grid-column-start: 2;
-  grid-row-start: 3;
-}
+        &:not(:first-child) {
+          display: block;
+        }
 
-.card6 {
-  grid-column-start: 3;
-  grid-row-start: 1;
-}
+        &:nth-child(1) {
+          top: 0;
+          left: 0;
+          z-index: 5;
+        }
 
-.card7 {
-  grid-column: span 2 / span 2;
-  grid-row: span 2 / span 2;
-  grid-column-start: 3;
-  grid-row-start: 2;
-  height: 220px;
-}
+        &:nth-child(2) {
+          top: -5px;
+          left: -5px;
+          z-index: 4;
+        }
 
-.card8 {
-  grid-row: span 2 / span 2;
-  grid-column-start: 3;
-  grid-row-start: 4;
-}
+        &:nth-child(3) {
+          top: -10px;
+          left: -10px;
+          z-index: 3;
+        }
 
-.card9 {
-  grid-column-start: 4;
-  grid-row-start: 1;
-}
+        &:nth-child(4) {
+          top: -15px;
+          left: -15px;
+          z-index: 2;
+        }
 
-.card10 {
-  grid-column-start: 4;
-  grid-row-start: 4;
-}
+        &:nth-child(5) {
+          top: -20px;
+          left: -20px;
+          z-index: 1;
+        }
 
-.card11 {
-  grid-column-start: 4;
-  grid-row-start: 5;
-}
+        card:hover & {
+          transform: scale(1.05);
+        }
+      }
+    }
 
-.card12 {
-  grid-row: span 3 / span 3;
-  grid-column-start: 5;
-  grid-row-start: 2;
+    &__content {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      gap: 10px;
+      padding-top: 10px;
+    }
+
+    .card1 {
+      grid-column-start: 1;
+      grid-row-start: 2;
+    }
+
+    .card2 {
+      grid-column-start: 1;
+      grid-row-start: 3;
+    }
+
+    .card3 {
+      grid-column-start: 1;
+      grid-row-start: 4;
+    }
+
+    .card4 {
+      grid-row: span 2 / span 2;
+      grid-column-start: 2;
+      grid-row-start: 1;
+    }
+
+    .card5 {
+      grid-row: span 3 / span 3;
+      grid-column-start: 2;
+      grid-row-start: 3;
+    }
+
+    .card6 {
+      grid-column-start: 3;
+      grid-row-start: 1;
+    }
+
+    .card7 {
+      grid-column: span 2 / span 2;
+      grid-row: span 2 / span 2;
+      grid-column-start: 3;
+      grid-row-start: 2;
+      height: 220px;
+    }
+
+    .card8 {
+      grid-row: span 2 / span 2;
+      grid-column-start: 3;
+      grid-row-start: 4;
+    }
+
+    .card9 {
+      grid-column-start: 4;
+      grid-row-start: 1;
+    }
+
+    .card10 {
+      grid-column-start: 4;
+      grid-row-start: 4;
+    }
+
+    .card11 {
+      grid-column-start: 4;
+      grid-row-start: 5;
+    }
+
+    .card12 {
+      grid-row: span 3 / span 3;
+      grid-column-start: 5;
+      grid-row-start: 2;
+    }
+  }
 }

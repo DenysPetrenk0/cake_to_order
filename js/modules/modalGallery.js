@@ -15,7 +15,7 @@ export const initModalGallery = () => {
 				</svg>
 			</a>
 			<div class="modal">
-				<img class="modal__image" src="${images[currentIndex]}" alt="Gallery Image">
+				<img class="modal__image gallery__img" src="${images[currentIndex]}" alt="Gallery Image">
 				<a href="#" class="modal__prev">
 					<svg class="modal__icon">
 						<use href="./assets/icon/modalArrow.svg#modal-arrow"></use>
