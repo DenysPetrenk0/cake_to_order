@@ -18,6 +18,22 @@
 }
 
 .modal {
+
+  &__gallery {
+
+    & img {
+      height: 90vh;
+      width: 90vw;
+    }
+
+    &__img {
+
+      &__box {
+        display: flex;
+      }
+    }
+  }
+
   &__image {
     display: none;
   }
@@ -33,17 +49,7 @@
 
   &__prev,
   &__next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-  }
-
-  &__prev {
-    left: 10px;
-    transform: translateY(-50%) rotate(180deg);
+    display: none;
   }
 
   &__next {
@@ -98,7 +104,7 @@
     }
 
     .description {
-      width: 50%;
+      width: 35%;
     }
 
     &__image {
@@ -116,6 +122,27 @@
         background: var(--text-second-color);
       }
     }
+
+    &__next {
+      display: block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    &__prev {
+      display: block;
+      position: absolute;
+      top: 50%;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      left: 10px;
+      transform: translateY(-50%) rotate(180deg);
+    }
   }
 
   @media screen and (min-width: 1200px) {
@@ -126,6 +153,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    &__gallery img {
+      height: 90vh;
+      width: 90vw;
+    }
 
     &__what_i_offer {
       width: 70vw;
