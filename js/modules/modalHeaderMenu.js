@@ -43,6 +43,7 @@ export const initModalHeaderMenu = () => {
 	const closeMenu = () => {
 		backdrop.classList.add("is-hidden");
 		document.querySelector("#menuBtn").style.display = "block";
+		backdrop.classList.remove("modal__menu");
 		backdrop.innerHTML = "";
 	};
 
