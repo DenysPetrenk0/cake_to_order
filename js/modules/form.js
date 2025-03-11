@@ -34,8 +34,10 @@ const showResModal = (text) => {
 				<use href="./assets/icon/cross.svg#cross"></use>
 			</svg>
 		</a>
-		<p class="modal__alert__text">${text}</p>
-		<button type="submit" id="modalCloseBtn">Добре</button>
+		<div class="modal__alert__box">
+			<p class="modal__alert__text">${text}</p>
+			<button type="submit" id="modalCloseBtn">Добре</button>
+		</div>
 	`;
 	backDrop.classList.remove("is-hidden");
 

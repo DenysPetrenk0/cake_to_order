@@ -19,6 +19,25 @@
 
 .modal {
 
+  &__menu {
+    display: flex;
+    justify-content: center;
+    background: var(--text-second-color);
+  }
+
+  &__link {
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--prim-title-color);
+
+    &:focus {
+      color: var(--title-color);
+    }
+  }
+
   &__gallery {
 
     & img {
@@ -67,12 +86,33 @@
     }
   }
 
-  @media screen and (min-width: 480px) {
-    &__menu {
+  &__alert {
+
+    &__box{
+      height: 50vh;
+      width: 90vw;
       display: flex;
+      align-items: center;
       justify-content: center;
+      flex-direction: column;
+      background: var(--text-second-color);
+      border-radius: 0 30px;
+      border: 2px solid var(--prim-title-color);
     }
 
+    &__text {
+      font-family: "Roboto Mono", serif;
+      font-size: 21px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 100px;
+      text-align: center;
+      color: var(--prim-title-color);
+    }
+  }
+
+  @media screen and (min-width: 480px) {
     &__item {
       margin-bottom: 30px;
     }
@@ -82,19 +122,6 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-    }
-
-    &__link {
-      font-size: 23px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 1.14;
-      text-transform: uppercase;
-      color: var(--prim-title-color);
-
-      &:focus {
-        color: var(--title-color);
-      }
     }
   }
 
@@ -142,6 +169,14 @@
       cursor: pointer;
       left: 10px;
       transform: translateY(-50%) rotate(180deg);
+    }
+
+    &__alert {
+
+      &__box {
+        height: 50vh;
+        width: 50vw;
+      }
     }
   }
 

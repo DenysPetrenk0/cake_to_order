@@ -75,26 +75,29 @@
 
     .social-links__list {
       position: absolute;
-      right: 13%;
-      top: 70%;
+      right: 70%;
+      top: 110%;
     }
   }
 
   @media screen and (min-width: 1200px) {
        &__video {
-      display: block;
-      width: 460px;
+         display: block;
+         width: 460px;
+         border-radius: 0 30px;
+         border: 2px solid var(--prim-title-color);
 
       &__container{
         display: flex;
         justify-content: center;
+        align-items: start;
         width: 50%;
       }
     }
 
     &__content {
       display: block;
-      width: 50%;
+      width: 65%;
       padding: 10px;
 
       &__text {
