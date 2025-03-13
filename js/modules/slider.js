@@ -19,7 +19,7 @@ lastSlide.setAttribute("id", "last-slide");
 slide.append(firstSlide);
 slide.prepend(lastSlide);
 
-const slideWidth = slides[index].clientWidth + 20;
+const slideWidth = slides[index].clientWidth + 24;
 
 const slideTransform = () => `translateX(${-slideWidth * index}px)`;
 const getSlide = () => document.querySelectorAll(".testimonials__item");

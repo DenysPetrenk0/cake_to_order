@@ -309,6 +309,8 @@ function animationOrderProcess() {
 	// gsap.timeline();
 	gsap.set('.order_process__title', {opacity: 0})
 	gsap.set('.order_process__title__second', {opacity: 0})
+	gsap.set('.order_process__form__input__icon', {opacity: 0})
+	gsap.set('.order_process__explanation__animation', {opacity: 0})
 	gsap.set(input, {opacity: 0, yPercent: 300})
 	gsap.set('#orderForm select', {opacity: 0, yPercent: 300})
 	gsap.set('#orderForm textarea', {opacity: 0, yPercent: 300})
@@ -336,6 +338,9 @@ function animationOrderProcess() {
 	gsap.to('.order_process__title__second', {
 		opacity: 1,
 	}, '-=0.3')
+	gsap.to('.order_process__explanation__animation', {
+		opacity: 1,
+	}, '-=0.4')
 	gsap.to('#orderForm button', {
 		yPercent: 0,
 		opacity: 1,
