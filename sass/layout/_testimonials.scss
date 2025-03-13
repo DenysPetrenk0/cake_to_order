@@ -4,7 +4,8 @@
 
   &__list {
     display: flex;
-    width: 95%;
+    width: 93vw;
+    min-height: 673px;
   }
 
   &__item {
@@ -13,9 +14,31 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column-reverse;
+    border: 2px solid var(--prim-title-color);
+    border-radius: 0 30px;
+    overflow: hidden;
 
     &__container {
-      display: none;
+      width: 94%;
+      height: 100%;
+      background: var(--bg-color);
+      padding: 25px 10px;
+    }
+
+    &__author {
+
+      &__photo {
+        margin-right: 10px;
+        border-radius: 50%;
+        width: 54px;
+      }
+
+      &__container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
     }
   }
 
@@ -34,6 +57,74 @@
   }
 
   @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__list {
+      width: 93vw;
+      min-height: 400px;
+    }
+
+    &__item {
+      flex-direction: row-reverse;
+
+      &__img {
+        width: 50%;
+      }
+
+      &__container {
+        box-sizing: border-box;
+        width: 50%;
+        max-width: 50%;
+        padding: 40px 25px;
+      }
+
+      &__author {
+
+        &__container {
+          margin-bottom: 50px;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+
+    &__list {
+      margin-top: 90px;
+      height: 470px;
+      width: 100%;
+    }
+
+    &__item {
+      display: flex;
+      min-width: calc((100% - 20px) / 2);
+      margin-right: 20px;
+      flex-direction: row-reverse;
+
+      &__container {
+        display: block;
+        width: 40%;
+        height: 100%;
+        padding: 20px;
+      }
+
+      &__author {
+
+        &__photo {
+        }
+
+        &__container {
+          margin-bottom: 30px;
+        }
+      }
+
+      &__img {
+        width: 60%;
+      }
+    }
+
     &__button {
       display: flex;
       justify-content: center;
@@ -65,49 +156,6 @@
 
       &:hover {
         scale: 1.1;
-      }
-    }
-  }
-
-  @media screen and (min-width: 1200px) {
-
-    &__list {
-      margin-top: 90px;
-      height: 470px;
-      width: 100%;
-    }
-
-    &__item {
-      display: flex;
-      min-width: calc((100% - 20px) / 2);
-      margin-right: 20px;
-      flex-direction: row-reverse;
-
-      &__container {
-        display: block;
-        width: 40%;
-        height: 92%;
-        background: var(--bg-color);
-        padding: 20px;
-      }
-
-      &__img {
-        width: 60%;
-      }
-
-      &__author {
-
-        &__photo {
-          margin-right: 10px;
-          border-radius: 50%;
-          width: 54px;
-        }
-
-        &__container {
-          display: flex;
-          align-items: center;
-          margin-bottom: 30px;
-        }
       }
     }
   }
