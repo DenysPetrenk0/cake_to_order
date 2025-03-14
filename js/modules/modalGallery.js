@@ -13,7 +13,7 @@ export const initModalGallery = () => {
 		backDrop.innerHTML = `
 			<a href="#" class="modal__close">
 				<svg class="modal__icon">
-					<use href="./assets/icon/cross.svg#cross"></use>
+					<use href="./assets/icon/sprite.svg#cross"></use>
 				</svg>
 			</a>
 			<div class="modal modal__gallery">
@@ -22,12 +22,12 @@ export const initModalGallery = () => {
 			</div>
 				<a href="#" class="modal__prev">
 					<svg class="modal__icon">
-						<use href="./assets/icon/modalArrow.svg#modal-arrow"></use>
+						<use href="./assets/icon/sprite.svg#arrow"></use>
 					</svg>
 				</a>
 				<a href="#" class="modal__next">
 					<svg class="modal__icon">
-						<use href="./assets/icon/modalArrow.svg#modal-arrow"></use>
+						<use href="./assets/icon/sprite.svg#arrow"></use>
 					</svg>
 				</a>
 			</div>
@@ -39,7 +39,6 @@ export const initModalGallery = () => {
 		const closeButton = backDrop.querySelector(".modal__close");
 		const prevButton = backDrop.querySelector(".modal__prev");
 		const nextButton = backDrop.querySelector(".modal__next");
-		const galleryImgBox = document.querySelector(".modal__gallery__img__box");
 
 		function closeModal(event) {
 			event.preventDefault();

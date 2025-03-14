@@ -31,7 +31,7 @@ const showResModal = (text) => {
 	backDrop.innerHTML = `
 		<a href="#" class="modal__close">
 			<svg class="modal__icon">
-				<use href="./assets/icon/cross.svg#cross"></use>
+				<use href="./assets/icon/sprite.svg#cross"></use>
 			</svg>
 		</a>
 		<div class="modal__alert__box">

@@ -112,17 +112,15 @@
     }
   }
 
-  @media screen and (min-width: 480px) {
-    &__item {
-      margin-bottom: 30px;
-    }
+  &__item {
+    margin-bottom: 30px;
+  }
 
-    &__nav{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
+  &__nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   @media screen and (min-width: 768px) {
@@ -234,12 +232,13 @@
     }
 
     &__price {
+      display: flex;
+      align-items: baseline;
+
       &__box {
-        display: flex;
         position: absolute;
         top: 5%;
         right: 0;
-        align-items: baseline;
       }
 
       &__text {
@@ -250,7 +249,7 @@
         margin-right: 10px;
       }
 
-      &__value {
+      &__number {
         font-family: "Roboto Mono", serif;
         font-size: 30px;
         font-weight: 700;

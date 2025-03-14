@@ -3,7 +3,7 @@ export const initModalHeaderMenu = () => {
 	backdrop.innerHTML = `
 		<a href="#" class="modal__close">
 			<svg class="modal__icon">
-				<use href="./assets/icon/cross.svg#cross"></use>
+				<use href="./assets/icon/sprite.svg#cross"></use>
 			</svg>
 		</a>
 		<ul class="modal__nav">
@@ -57,7 +57,7 @@ export const initModalHeaderMenu = () => {
 	});
 
 	backdrop.querySelectorAll(".modal__link").forEach(link => {
-		link.addEventListener("click", (event) => {
+		link.addEventListener("click", () => {
 			closeMenu();
 		});
 	});

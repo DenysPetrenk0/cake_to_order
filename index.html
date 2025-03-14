@@ -22,17 +22,13 @@
             <img src="./assets/img/logo.png" alt="logo">
         </div>
         <div class="loader__item">
-            <svg class="loader__item__icon">
-                <use href="./assets/icon/cakes.svg#cake1"></use>
-            </svg>
+            <img src="./assets/icon/cake.svg" class="loader__item__icon" alt="">
         </div>
         <div class="loader__item">
             <img class="loader__item__logo" src="./assets/img/logo.png" alt="logo">
         </div>
         <div class="loader__item">
-            <svg class="loader__item__icon">
-                <use href="./assets/icon/cakes.svg#cake2"></use>
-            </svg>
+            <img src="./assets/icon/cake-piece.svg" class="loader__item__icon" alt="">
         </div>
     </div>
     <header class="header">
@@ -94,7 +90,7 @@
             </ul>
             <button type="button" id="menuBtn" class="menu_btn">
                 <svg class="menu_btn__icon">
-                    <use href="./assets/icon/menu.svg#menu"></use>
+                    <use href="./assets/icon/sprite.svg#menu"></use>
                 </svg>
             </button>
         </nav>
@@ -104,7 +100,23 @@
                     <svg class="menu__contact__link__icon">
                         <use href="./assets/icon/sprite.svg#mobile"></use>
                     </svg>
+                    +380671862009
+                </a>
+            </li>
+            <li class="menu__contact">
+                <a href="" class="menu__contact__link">
+                    <svg class="menu__contact__link__icon">
+                        <use href="./assets/icon/sprite.svg#mobile"></use>
+                    </svg>
                     +380731862009
+                </a>
+            </li>
+            <li class="menu__contact">
+                <a href="" class="menu__contact__link">
+                    <svg class="menu__contact__link__icon">
+                        <use href="./assets/icon/sprite.svg#mobile"></use>
+                    </svg>
+                    +380506218154
                 </a>
             </li>
             <li class="menu__item">
@@ -123,17 +135,13 @@
                 <source src="./assets/video/hero_bg.mp4" type="video/mp4">
             </video>
             <div class="hero__container container">
-                <svg class="hero__icon hero__icon__left">
-                    <use href="./assets/icon/cakes.svg#cake1"></use>
-                </svg>
+                <img src="./assets/icon/cake.svg" class="hero__icon hero__icon__left" alt="">
                 <div class="hero__content">
                     <h1 class="hero__title">ТОРТ НА ЗАМОВЛЕННЯ</h1>
                     <h2 class="hero__sub__title">Унікальні десерти з любов’ю та майстерністю!</h2>
                     <button type="button" id="scrollButtonOfferSection">Замовити</button>
                 </div>
-                <svg class="hero__icon hero__icon__right">
-                    <use href="./assets/icon/cakes.svg#cake2"></use>
-                </svg>
+                <img src="./assets/icon/cake-piece.svg" class="hero__icon hero__icon__left" alt="">
             </div>
             <div class="hero__hashtag__container">
                 <a href="#" class="hero__hashtag__text">#Cake_to_0rder</a>
@@ -225,7 +233,7 @@
                                     rel="noopener noreferrer"
                             >
                                 <svg class="social-links__icon">
-                                    <use href="./assets/icon/social-links.svg#tiktok"></use>
+                                    <use href="./assets/icon/sprite.svg#tiktok"></use>
                                 </svg>
                             </a>
                         </li>
@@ -237,7 +245,7 @@
                                     rel="noopener noreferrer"
                             >
                                 <svg class="social-links__icon">
-                                    <use href="./assets/icon/social-links.svg#facebook"></use>
+                                    <use href="./assets/icon/sprite.svg#facebook"></use>
                                 </svg>
                             </a>
                         </li>
@@ -249,7 +257,7 @@
                                     rel="noopener noreferrer"
                             >
                                 <svg class="social-links__icon">
-                                    <use href="./assets/icon/social-links.svg#instagram"></use>
+                                    <use href="./assets/icon/sprite.svg#instagram"></use>
                                 </svg>
                             </a>
                         </li>
@@ -578,12 +586,12 @@
                 <div class="testimonials__button__container">
                     <a href="#" class="testimonials__button testimonials__button__next">
                         <svg class="testimonials__button__icon">
-                            <use href="./assets/icon/modalArrow.svg#modal-arrow"></use>
+                            <use href="./assets/icon/sprite.svg#arrow"></use>
                         </svg>
                     </a>
                     <a href="#" class="testimonials__button testimonials__button__prev">
                         <svg class="testimonials__button__icon">
-                            <use href="./assets/icon/modalArrow.svg#modal-arrow"></use>
+                            <use href="./assets/icon/sprite.svg#arrow"></use>
                         </svg>
                     </a>
                 </div>
@@ -598,19 +606,19 @@
                         <label class="order_process__form__field">
                             <input type="text" class="order_process__form__input" name="name" placeholder="ім'я">
                             <svg class="order_process__form__input__icon order_process__explanation__animation">
-                                <use href="./assets/icon/asterisk.svg#asterisk"></use>
+                                <use href="./assets/icon/sprite.svg#asterisk"></use>
                             </svg>
                         </label>
                         <label class="order_process__form__field">
                             <input type="text" class="order_process__form__input" name="last_name"
                                    placeholder="прізвище">
                             <svg class="order_process__form__input__icon order_process__explanation__animation">
-                                <use href="./assets/icon/asterisk.svg#asterisk"></use>
+                                <use href="./assets/icon/sprite.svg#asterisk"></use>
                             </svg>
                         </label>
                         <label class="order_process__form__field">
                             <select name="communication" id="form_communication" class="order_process__form__input">
-                                <option value="" selected disabled>Оберіть зв'язку</option>
+                                <option value="" selected disabled>Оберіть вид зв'язку</option>
                                 <option value="tel">телефон</option>
                                 <option value="instagram">instagram</option>
                                 <option value="viber">viber</option>
@@ -622,7 +630,7 @@
                             <input type="tel" id="input_contact" class="order_process__form__input" name="contact"
                                    placeholder="телефон">
                             <svg class="order_process__form__input__icon order_process__explanation__animation">
-                                <use href="./assets/icon/asterisk.svg#asterisk"></use>
+                                <use href="./assets/icon/sprite.svg#asterisk"></use>
                             </svg>
                         </label>
                     </div>
@@ -634,7 +642,7 @@
                 </form>
                 <div class="order_process__explanation order_process__explanation__animation">
                     <svg class="order_process__explanation__icon">
-                        <use href="./assets/icon/asterisk.svg#asterisk"></use>
+                        <use href="./assets/icon/sprite.svg#asterisk"></use>
                     </svg>
                     <p class="order_process__explanation__text"> - поля обов'язкові для заповнення</p>
                 </div>
@@ -653,7 +661,7 @@
                             rel="noopener noreferrer"
                     >
                         <svg class="social-links__icon">
-                            <use href="./assets/icon/social-links.svg#tiktok"></use>
+                            <use href="./assets/icon/sprite.svg#tiktok"></use>
                         </svg>
                     </a>
                 </li>
@@ -665,7 +673,7 @@
                             rel="noopener noreferrer"
                     >
                         <svg class="social-links__icon">
-                            <use href="./assets/icon/social-links.svg#facebook"></use>
+                            <use href="./assets/icon/sprite.svg#facebook"></use>
                         </svg>
                     </a>
                 </li>
@@ -677,7 +685,7 @@
                             rel="noopener noreferrer"
                     >
                         <svg class="social-links__icon">
-                            <use href="./assets/icon/social-links.svg#instagram"></use>
+                            <use href="./assets/icon/sprite.svg#instagram"></use>
                         </svg>
                     </a>
                 </li>
