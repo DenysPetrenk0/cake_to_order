@@ -1,5 +1,3 @@
-import {startSlide, stopSlide} from "./slider.js";
-
 export function initSmoothScroll() {
 	const sections = document.querySelectorAll(".section, footer");
 	const navLinks = document.querySelectorAll(".menu__link");
@@ -42,11 +40,6 @@ export function initSmoothScroll() {
 
 				if (activeLink) {
 					activeLink.classList.add("active");
-				}
-				if (id === "Testimonials") {
-					startSlide();
-				} else {
-					stopSlide();
 				}
 				document.querySelector(".hero__hashtag__container").style.display = id === "Contact" ? "none" : "block";
 			}
