@@ -111,7 +111,7 @@
           }
 
           &__contact {
-            margin-bottom: 10px;
+            margin-right: 10px;
 
             &__link {
               display: flex;
@@ -141,6 +141,7 @@
          }
       }
         .contact {
+          display: flex;
           position: fixed;
           top: 92%;
           right: 3%;
@@ -148,7 +149,13 @@
     }
 
     @media screen and (min-width: 1200px) {
+      .menu__contact {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+
       .contact {
+        display: block;
         position: fixed;
         top: 50px;
         right: 50px;
