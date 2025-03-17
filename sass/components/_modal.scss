@@ -39,13 +39,11 @@
   }
 
   &__gallery {
-
-    & img {
-      height: 90vh;
-      width: 90vw;
-    }
-
     &__img {
+      display: block !important;
+      height: 80vh;
+      border-radius: 0 40px;
+      border: 2px solid var(--prim-title-color);
 
       &__box {
         display: flex;
@@ -59,8 +57,8 @@
 
   &__close {
     position: absolute;
-    top: 5%;
-    right: 5%;
+    top: 3%;
+    right: 3%;
     background: none;
     border: none;
     cursor: pointer;
@@ -69,10 +67,6 @@
   &__prev,
   &__next {
     display: none;
-  }
-
-  &__next {
-    right: 10px;
   }
 
   &__icon {
@@ -123,88 +117,15 @@
     align-items: center;
   }
 
-  @media screen and (min-width: 768px) {
-    .content {
-      display: flex;
-    }
-
-    .description {
-      width: 35%;
-    }
-
-    &__image {
-      display: block;
-      object-fit: contain;
-      border-radius: 10px;
-      cursor: pointer;
-
-      &__box {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 50%;
-        border-radius: 10px;
-        background: var(--text-second-color);
-      }
-    }
-
-    &__next {
-      display: block;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      border: none;
-      padding: 10px;
-      cursor: pointer;
-    }
-
-    &__prev {
-      display: block;
-      position: absolute;
-      top: 50%;
-      border: none;
-      padding: 10px;
-      cursor: pointer;
-      left: 10px;
-      transform: translateY(-50%) rotate(180deg);
-    }
-
-    &__alert {
-
-      &__box {
-        height: 50vh;
-        width: 50vw;
-      }
-    }
-  }
-
-  @media screen and (min-width: 1200px) {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &__gallery img {
-      height: 90vh;
-      width: 90vw;
-    }
-
-    &__what_i_offer {
-      width: 70vw;
-      height: 70vh;
-    }
-  }
-
   .description {
     position: relative;
     background: var(--title-color);
-    border-radius: 10px;
     color: #212121;
-    margin-right: 5px;
-    padding: 140px 60px;
+    padding: 80px 35px;
+    width: 80vw;
+    height: 90vh;
+    border-radius: 0 40px;
+    border: 2px solid var(--prim-title-color);
 
     &__title {
       font-family: "Roboto Mono", serif;
@@ -212,7 +133,7 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: .3em;
-      margin-bottom: 50px;
+      margin-bottom: 20px;
       text-align: left;
     }
 
@@ -237,7 +158,7 @@
 
       &__box {
         position: absolute;
-        top: 5%;
+        top: 2%;
         right: 0;
       }
 
@@ -259,4 +180,91 @@
     }
   }
 
+  @media screen and (min-width: 768px) {
+    .content {
+      display: flex;
+    }
+
+    .description {
+      margin-right: 5px;
+      padding: 140px 60px;
+      width: 50%;
+    }
+
+    &__image {
+      display: block;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      &__box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        background: var(--text-second-color);
+        overflow: hidden;
+        border: 2px solid var(--prim-title-color);
+        border-radius: 40px 0;
+      }
+    }
+
+    &__next {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 75%;
+      transform: translateY(-50%);
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    &__prev {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 20%;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      transform: translateY(-50%) rotate(180deg);
+    }
+
+    &__alert {
+
+      &__box {
+        height: 50vh;
+        width: 50vw;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__close {
+      top: 5%;
+      right: 5%;
+    }
+
+    .description {
+      &__title {
+        margin-bottom: 50px;
+      }
+
+      &__price {
+        &__box {
+          top: 5%;
+        }
+      }
+    }
+  }
 }
