@@ -59,7 +59,6 @@
   @media screen and (min-width: 480px) {
     &__content {
       &__text {
-
         & p {
           font-size: 15px;
         }
@@ -104,11 +103,13 @@
         padding: 10px;
         column-count: 2;
         column-gap: 40px;
+        & p {
+          font-size: 13px;
+        }
       }
     }
 
     &__img {
-
       &__box{
         max-width: 225px;
       }

@@ -62,13 +62,13 @@ export const setOrder = () => {
 			return;
 		}
 
-		const botToken = "token";
-		const chatId = "id";
+		const botToken = "7821261671:AAFWNRfaHrKhqmCA7DqhsM3FoXxInLbpNEE";
+		const chatId = "854901237";
 		const formData = new FormData(this);
 
 		const text = `
 		🔔 *Нове замовлення!*  
-		👤 *Ім'я:* ${formData.get('name')} ${formData.get('last_name')}  
+		👤 *Ім'я:* ${formData.get('name')} ${formData.get('last_name') || 'Немає'}  
 		📞 *Контакт:* ${formData.get('contact')}  
 		📡 *Зв'язок:* ${formData.get('communication')}  
 		📋 *Деталі:* ${formData.get('description') || 'Немає'}
