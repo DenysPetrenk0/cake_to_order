@@ -62,8 +62,8 @@ export const setOrder = () => {
 			return;
 		}
 
-		const botToken = "token";
-		const chatId = "id";
+		const botToken = "7821261671:AAFWNRfaHrKhqmCA7DqhsM3FoXxInLbpNEE";
+		const chatId = "854901237";
 		const formData = new FormData(this);
 
 		const text = `
