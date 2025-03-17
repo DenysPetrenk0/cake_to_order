@@ -17,20 +17,20 @@ export const initModalGallery = () => {
 				</svg>
 			</a>
 			<div class="modal modal__gallery">
-			<div class="modal__gallery__img__box">
-				<img class="modal__image gallery__img" src="${images[currentIndex]}" alt="Gallery Image">			
+				<div class="modal__gallery__img__box">
+					<img class="modal__image modal__gallery__img" src="${images[currentIndex]}" alt="Gallery Image">			
+				</div>
 			</div>
-				<a href="#" class="modal__prev">
-					<svg class="modal__icon">
-						<use href="./assets/icon/sprite.svg#arrow"></use>
-					</svg>
-				</a>
+			<a href="#" class="modal__prev">
+				<svg class="modal__icon">
+					<use href="./assets/icon/sprite.svg#arrow"></use>
+				</svg>
+			</a>
 				<a href="#" class="modal__next">
-					<svg class="modal__icon">
-						<use href="./assets/icon/sprite.svg#arrow"></use>
-					</svg>
-				</a>
-			</div>
+				<svg class="modal__icon">
+					<use href="./assets/icon/sprite.svg#arrow"></use>
+				</svg>
+			</a>
 		`;
 
 		backDrop.classList.remove("is-hidden");
