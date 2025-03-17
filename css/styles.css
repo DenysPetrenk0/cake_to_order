@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --text-second-color: #757575;
   --bg-color: #212121;
@@ -40,6 +41,10 @@ body {
   margin: 0;
   color: var(--title-color);
   overflow-x: hidden;
+  user-select: none;
+  -webkit-user-select: none; /* Для Safari */
+  -moz-user-select: none; /* Для Firefox */
+  -ms-user-select: none; /* Для старих IE */
 }
 
 html {
@@ -586,6 +591,9 @@ ul {
     column-count: 2;
     column-gap: 40px;
   }
+  .about_me__content__text p {
+    font-size: 13px;
+  }
   .about_me__img__box {
     max-width: 225px;
   }
@@ -783,11 +791,12 @@ ul {
 }
 .order_process__form__input__icon {
   position: absolute;
-  top: 20%;
-  right: -2%;
+  top: 50%;
+  right: 2%;
   fill: red;
   width: 15px;
   height: 15px;
+  transform: translate(0, -50%);
 }
 .order_process__form textarea {
   height: 100px;
@@ -826,19 +835,38 @@ ul {
 }
 
 .footer {
-  height: 50vh;
+  min-height: 100vh;
+  height: 100dvh;
   background: var(--bg-second-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .footer__hashtag {
   text-align: center;
-  margin-bottom: 50px;
   font-family: "Roboto Mono", serif;
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.3em;
   margin-top: 30px;
+  margin-bottom: 50px;
   color: var(--prim-title-color);
+}
+.footer__title {
+  font-family: "Great Vibes", serif;
+  line-height: 50px;
+  color: var(--title-color);
+  text-align: center;
+  font-size: 34px;
+}
+.footer .social-links__list {
+  margin-bottom: 50px;
+}
+@media screen and (min-width: 1200px) {
+  .footer__hashtag {
+    font-size: 30px;
+  }
 }
 
 .loader {

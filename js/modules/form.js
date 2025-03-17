@@ -68,7 +68,7 @@ export const setOrder = () => {
 
 		const text = `
 		🔔 *Нове замовлення!*  
-		👤 *Ім'я:* ${formData.get('name')} ${formData.get('last_name')}  
+		👤 *Ім'я:* ${formData.get('name')} ${formData.get('last_name') || 'Немає'}  
 		📞 *Контакт:* ${formData.get('contact')}  
 		📡 *Зв'язок:* ${formData.get('communication')}  
 		📋 *Деталі:* ${formData.get('description') || 'Немає'}

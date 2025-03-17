@@ -72,11 +72,12 @@
 
       &__icon {
         position: absolute;
-        top: 20%;
-        right: -2%;
+        top: 50%;
+        right: 2%;
         fill: red;
         width: 15px;
         height: 15px;
+        transform: translate(0, -50%);
       }
     }
 

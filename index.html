@@ -121,7 +121,12 @@
                 </a>
             </li>
             <li class="menu__item">
-                <a href="" class="menu__contact__link">
+                <a
+                        href="https://t.me/cake_to_order"
+                        class="menu__contact__link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                >
                     <svg class="menu__contact__link__icon">
                         <use href="./assets/icon/sprite.svg#telegram"></use>
                     </svg>
@@ -612,21 +617,19 @@
         <section id="OrderProcess" class="order_process section">
             <div class="container">
                 <h2 class="order_process__title">Бажаєте зробити замовлення</h2>
-                <p class="order_process__title__second">Вкажіть своє ім'я, контактну інформацію. Ми зв'яжемось з Вами, якомога швидше!</p>
+                <p class="order_process__title__second">Вкажіть своє ім'я та контактну інформацію. Ми зв'яжемось з
+                    Вами, якомога швидше!</p>
                 <form action="#" id="orderForm" class="order_process__form">
                     <div class="order_process__form__box">
                         <label class="order_process__form__field">
-                            <input type="text" class="order_process__form__input" name="name" placeholder="ім'я">
+                            <input type="text" class="order_process__form__input" name="name" placeholder="Ім'я">
                             <svg class="order_process__form__input__icon order_process__explanation__animation">
                                 <use href="./assets/icon/sprite.svg#asterisk"></use>
                             </svg>
                         </label>
                         <label class="order_process__form__field">
                             <input type="text" class="order_process__form__input" name="last_name"
-                                   placeholder="прізвище">
-                            <svg class="order_process__form__input__icon order_process__explanation__animation">
-                                <use href="./assets/icon/sprite.svg#asterisk"></use>
-                            </svg>
+                                   placeholder="Прізвище (необов'язково)">
                         </label>
                         <label class="order_process__form__field">
                             <select name="communication" id="form_communication" class="order_process__form__input">
@@ -648,7 +651,7 @@
                     </div>
                     <label class="order_process__form__field">
                         <textarea class="order_process__form__input" name="description"
-                                  placeholder="опишіть в декількох словах, що бажаєте замовити (необов'язково)"></textarea>
+                                  placeholder="Опишіть в декількох словах, що бажаєте замовити (необов'язково)"></textarea>
                     </label>
                     <button type="submit">Замовити</button>
                 </form>
@@ -702,6 +705,7 @@
                     </a>
                 </li>
             </ul>
+            <h2 class="footer__title">Шукайте нас в соц.мережах або звертайтесь за нашими контактами</h2>
         </div>
     </footer>
     <div class="backdrop is-hidden"></div>
