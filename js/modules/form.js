@@ -53,11 +53,10 @@ export const setOrder = () => {
 		event.preventDefault();
 
 		const name = this.querySelector("[name='name']").value.trim();
-		const lastName = this.querySelector("[name='last_name']").value.trim();
 		const contact = this.querySelector("[name='contact']").value.trim();
 		const communication = this.querySelector("[name='communication']").value.trim();
 
-		if (!name || !lastName || !contact || !communication) {
+		if (!name || !contact || !communication) {
 			showResModal("Будь ласка, заповніть всі обов'язкові поля!");
 			return;
 		}
@@ -68,7 +67,7 @@ export const setOrder = () => {
 
 		const text = `
 		🔔 *Нове замовлення!*  
-		👤 *Ім'я:* ${formData.get('name')} ${formData.get('last_name') || 'Немає'}  
+		👤 *Ім'я:* ${formData.get('name')} ${formData.get('last_name')}  
 		📞 *Контакт:* ${formData.get('contact')}  
 		📡 *Зв'язок:* ${formData.get('communication')}  
 		📋 *Деталі:* ${formData.get('description') || 'Немає'}
