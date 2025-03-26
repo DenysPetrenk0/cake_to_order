@@ -137,7 +137,7 @@ ul {
     display: flex;
     position: fixed;
     top: 60px;
-    left: 50%;
+    left: 48%;
     transform: translate(-50%, -50%);
   }
   .header .menu__nav li + li {
@@ -655,6 +655,110 @@ ul {
   }
 }
 
+.cuts {
+  background: var(--bg-second-color);
+}
+.cuts .container {
+  padding-top: 120px;
+}
+.cuts__item {
+  margin-bottom: 50px;
+  border: 3px solid var(--prim-title-color);
+  border-radius: 0 30px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}
+.cuts__item img {
+  height: 80vh;
+}
+.cuts__item__description__title {
+  position: absolute;
+  bottom: 65%;
+  left: 6%;
+  font-family: "Great Vibes", serif;
+  font-size: 60px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+  color: var(--bg-second-color);
+}
+.cuts__item__description__text {
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  color: var(--title-color);
+  font-family: "Noto Sans Display", serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.6;
+  text-align: justify;
+  padding: 20px;
+}
+.cuts__item__description.honey h3, .cuts__item__description.napoleon h3, .cuts__item__description.snickers h3 {
+  bottom: 74%;
+}
+.cuts__item__description.lavender h3, .cuts__item__description.oreo h3 {
+  color: var(--title-color);
+  bottom: 74%;
+}
+.cuts__item__description.lavender-orange-peach h3 {
+  font-size: 39px;
+  color: var(--title-color);
+  bottom: 74%;
+}
+.cuts__item__description.raspberry-raffaello h3 {
+  color: var(--title-color);
+}
+.cuts__item__description.orange-tiramisu h3 {
+  font-size: 58px;
+}
+.cuts__item__description.tenderness h3 {
+  bottom: 74%;
+  color: var(--title-color);
+}
+.cuts__item__description.tenderness p {
+  color: var(--bg-second-color);
+  font-weight: 600;
+}
+.cuts__item__description.pistachio h3 {
+  font-size: 54px;
+}
+.cuts__item__description.chocolate-raspberry h3 {
+  color: var(--title-color);
+}
+.cuts__item__description.chocolate-raspberry p {
+  color: var(--bg-second-color);
+}
+.cuts__item__link {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  border-radius: 50%;
+  background: var(--bg-second-color) !important;
+}
+.cuts__item__link .social-links__icon {
+  width: 25px;
+  height: 25px;
+}
+.cuts__item__link:hover {
+  scale: 1.1;
+}
+.cuts .swiper-button-next,
+.cuts .swiper-button-prev {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .cuts .swiper-button-next,
+  .cuts .swiper-button-prev {
+    display: block;
+    color: var(--title-color);
+  }
+  .cuts .swiper-button-next:hover,
+  .cuts .swiper-button-prev:hover {
+    color: var(--prim-title-color);
+  }
+}
+
 .testimonials {
   position: relative;
   background: var(--bg-second-color);
@@ -1019,6 +1123,7 @@ button:not(.menu_btn):after {
   background: var(--text-second-color);
   border-radius: 0 30px;
   border: 2px solid var(--prim-title-color);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
 }
 .modal__alert__text {
   font-family: "Roboto Mono", serif;
@@ -1048,6 +1153,7 @@ button:not(.menu_btn):after {
   height: 90vh;
   border-radius: 0 40px;
   border: 2px solid var(--prim-title-color);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
 }
 .modal .description__title {
   font-family: "Roboto Mono", serif;
@@ -1119,6 +1225,7 @@ button:not(.menu_btn):after {
     overflow: hidden;
     border: 2px solid var(--prim-title-color);
     border-radius: 40px 0;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
   }
   .modal__next {
     display: block;
@@ -1164,6 +1271,9 @@ button:not(.menu_btn):after {
   }
   .modal .description__price__box {
     top: 5%;
+  }
+  .modal__image {
+    height: 90vh;
   }
 }
 

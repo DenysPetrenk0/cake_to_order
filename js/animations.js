@@ -36,7 +36,7 @@ tlLoader
 		scale: 0
 	}, {
 		scale: 1,
-		duration: 1
+		duration: 0.5
 	})
 	.fromTo('.hero__title', {
 		yPercent: 100,
@@ -45,7 +45,7 @@ tlLoader
 		yPercent: 0,
 		opacity: 1,
 		ease: "power2.out",
-		duration: 1
+		duration: 0.5
 	})
 	.fromTo('.hero__sub__title', {
 		yPercent: 100,
@@ -54,7 +54,7 @@ tlLoader
 		yPercent: 0,
 		opacity: 1,
 		ease: "power2.out",
-		duration: 1
+		duration: 0.5
 	})
 	.fromTo('#scrollButtonOfferSection', {
 		yPercent: 100,
@@ -63,7 +63,7 @@ tlLoader
 		yPercent: 0,
 		opacity: 1,
 		ease: "power2.out",
-		duration: 1
+		duration: 0.5
 	})
 	.fromTo('.hero__icon', {
 		yPercent: 100,
@@ -72,7 +72,7 @@ tlLoader
 		yPercent: 0,
 		opacity: 1,
 		ease: "power2.out",
-		duration: 1
+		duration: 0.5
 	})
 	.fromTo('.header li', {
 		yPercent: -50,
@@ -81,7 +81,7 @@ tlLoader
 		yPercent: 0,
 		opacity: 1,
 		ease: "power2.out",
-		duration: 1,
+		duration: 0.5,
 		stagger: 0.15
 	})
 	.fromTo('.hero__hashtag__container', {
@@ -91,7 +91,7 @@ tlLoader
 		yPercent: 0,
 		opacity: 1,
 		ease: "power2.out",
-		duration: 1,
+		duration: 0.5,
 	})
 
 gsap.to('.hero__title', {

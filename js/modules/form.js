@@ -15,6 +15,7 @@ export const setupContactPlaceholder = () => {
 	selectCommunication.addEventListener("change", function () {
 		inputContact.placeholder = placeholderText[this.value] || 'Контактні дані';
 		inputContact.type = this.value === "tel" || this.value === 'viber' ? 'tel' : 'text';
+		inputContact.disabled = !this.value;
 	});
 };
 
@@ -48,6 +49,11 @@ const showResModal = (text) => {
 	okBtn.addEventListener("click", closeModal);
 }
 
+	const isValidPhoneNumber = (number) => {
+		const phoneRegex = /^(?:\d{10}|380\d{9})$/;
+		return phoneRegex.test(number);
+	};
+
 export const setOrder = () => {
 	document.getElementById("orderForm").addEventListener("submit", async function(event) {
 		event.preventDefault();
@@ -58,6 +64,11 @@ export const setOrder = () => {
 
 		if (!name || !contact || !communication) {
 			showResModal("Будь ласка, заповніть всі обов'язкові поля!");
+			return;
+		}
+
+		if (communication === 'tel' && !isValidPhoneNumber(contact)) {
+			showResModal("Невірно вказаний номер телефону. Перевірте номер і спробуйте ще раз!");
 			return;
 		}
 
