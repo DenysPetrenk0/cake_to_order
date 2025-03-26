@@ -1,0 +1,142 @@
+.cuts {
+  background: var(--bg-second-color);
+
+  .container {
+    padding-top: 120px;
+  }
+
+  &__item {
+    margin-bottom: 50px;
+    border: 3px solid var(--prim-title-color);
+    border-radius: 0 30px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+
+    img {
+      height: 80vh;
+    }
+
+    &__description {
+      &__title {
+        position: absolute;
+        bottom: 65%;
+        left: 6%;
+        font-family: "Great Vibes", serif;
+        font-size: 60px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        margin-bottom: 20px;
+        color: var(--bg-second-color);
+      }
+
+      &__text {
+        position: absolute;
+        bottom: 5%;
+        left: 0;
+        color: var(--title-color);
+        font-family: "Noto Sans Display", serif;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 1.6;
+        text-align: justify;
+        padding: 20px;
+      }
+
+      &.honey,
+      &.napoleon,
+      &.snickers {
+        h3 {
+          bottom: 74%;
+        }
+      }
+
+      &.lavender,
+      &.oreo {
+        h3 {
+          color: var(--title-color);
+          bottom: 74%;
+        }
+      }
+
+      &.lavender-orange-peach {
+        h3 {
+          font-size: 39px;
+          color: var(--title-color);
+          bottom: 74%;
+        }
+      }
+
+      &.raspberry-raffaello {
+        h3 {
+          color: var(--title-color);
+        }
+      }
+
+      &.orange-tiramisu {
+        h3 {
+          font-size: 58px;
+        }
+      }
+
+      &.tenderness {
+        h3 {
+          bottom: 74%;
+          color: var(--title-color);
+        }
+        p {
+          color: var(--bg-second-color);
+          font-weight: 600;
+        }
+      }
+
+      &.pistachio {
+        h3 {
+          font-size: 54px;
+        }
+      }
+
+      &.chocolate-raspberry {
+        h3 {
+          color: var(--title-color);
+        }
+
+        p {
+          color: var(--bg-second-color);
+        }
+      }
+    }
+
+    &__link {
+      position: absolute;
+      top: 2%;
+      right: 2%;
+      border-radius: 50%;
+      background: var(--bg-second-color) !important;
+
+      .social-links__icon {
+        width: 25px;
+        height: 25px;
+      }
+
+      &:hover {
+        scale: 1.1;
+      }
+    }
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+  @media screen and (min-width: 768px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+      display: block;
+      color: var(--title-color);
+
+      &:hover {
+        color: var(--prim-title-color);
+      }
+    }
+  }
+}

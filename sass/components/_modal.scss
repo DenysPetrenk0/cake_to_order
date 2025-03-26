@@ -92,6 +92,7 @@
       background: var(--text-second-color);
       border-radius: 0 30px;
       border: 2px solid var(--prim-title-color);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
     }
 
     &__text {
@@ -126,6 +127,7 @@
     height: 90vh;
     border-radius: 0 40px;
     border: 2px solid var(--prim-title-color);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
 
     &__title {
       font-family: "Roboto Mono", serif;
@@ -207,6 +209,7 @@
         overflow: hidden;
         border: 2px solid var(--prim-title-color);
         border-radius: 40px 0;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
       }
     }
 
@@ -265,6 +268,10 @@
           top: 5%;
         }
       }
+    }
+
+    &__image {
+      height: 90vh;
     }
   }
 }
