@@ -666,7 +666,6 @@ ul {
   border: 3px solid var(--prim-title-color);
   border-radius: 0 30px;
   overflow: hidden;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
 }
 .cuts__item img {
   height: 80vh;
@@ -721,7 +720,7 @@ ul {
   font-weight: 600;
 }
 .cuts__item__description.pistachio h3 {
-  font-size: 54px;
+  font-size: 46px;
 }
 .cuts__item__description.chocolate-raspberry h3 {
   color: var(--title-color);
@@ -741,7 +740,9 @@ ul {
   height: 25px;
 }
 .cuts__item__link:hover {
+  background: var(--title-color) !important;
   scale: 1.1;
+  transition: background-color, scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .cuts .swiper-button-next,
 .cuts .swiper-button-prev {
@@ -1090,6 +1091,21 @@ button:not(.menu_btn):after {
 .modal__gallery__img__box {
   display: flex;
 }
+.modal__what_i_offer__tiktok {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  margin: 0 auto;
+  background: var(--prim-title-color) !important;
+}
+.modal__what_i_offer__tiktok .social-links__icon {
+  fill: var(--bg-second-color);
+}
+.modal__what_i_offer__tiktok:hover, .modal__what_i_offer__tiktok:focus {
+  scale: 1.1;
+  background: var(--bg-second-color) !important;
+  transition: background-color, scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .modal__image {
   display: none;
 }
@@ -1123,7 +1139,6 @@ button:not(.menu_btn):after {
   background: var(--text-second-color);
   border-radius: 0 30px;
   border: 2px solid var(--prim-title-color);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
 }
 .modal__alert__text {
   font-family: "Roboto Mono", serif;
@@ -1153,7 +1168,6 @@ button:not(.menu_btn):after {
   height: 90vh;
   border-radius: 0 40px;
   border: 2px solid var(--prim-title-color);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
 }
 .modal .description__title {
   font-family: "Roboto Mono", serif;
@@ -1225,7 +1239,6 @@ button:not(.menu_btn):after {
     overflow: hidden;
     border: 2px solid var(--prim-title-color);
     border-radius: 40px 0;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
   }
   .modal__next {
     display: block;

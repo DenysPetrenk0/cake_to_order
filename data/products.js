@@ -8,7 +8,8 @@ export const products = {
 			" варіантів. </br>" +
 			"Ідеальна порція – чудовий вибір для фуршету, подарунку або солодкої паузи. </br>" +
 			"Завжди свіжі та натуральні – тільки якісні інгредієнти для бездоганного смаку. </br>",
-		price: "150"
+		price: "150",
+		tikTokLink: "https://vm.tiktok.com/ZMBaNKw3B"
 	},
 	women: {
 		image: "./assets/img/whatIOffer/modal/women.jpg",
@@ -18,7 +19,8 @@ export const products = {
 			"Я підкреслю індивідуальність і створю справжній витвір мистецтва для вашої особливої жінки. </br>" +
 			"</br>" +
 			"Замовляйте і даруйте найсолодші емоції!",
-		price: "950"
+		price: "950",
+		tikTokLink: "https://vm.tiktok.com/ZMBajR8k7"
 	},
 	men: {
 		image: "./assets/img/whatIOffer/modal/men.jpg",
@@ -28,7 +30,8 @@ export const products = {
 		secondText: "Стримані та стильні або ж брутальні й харизматичні – я зроблю торт, що підкреслить характер та інтереси " +
 			"чоловіка. </br>" +
 			"Дизайн може включати мінімалізм, темні відтінки, алкогольні мотиви, спортивні чи автомобільні теми.",
-		price: "950"
+		price: "950",
+		tikTokLink: "https://vm.tiktok.com/ZMBa2KFcV"
 	},
 	festiv: {
 		image: "./assets/img/whatIOffer/modal/festive.jpg",
@@ -39,7 +42,8 @@ export const products = {
 			" важливі моменти життя. </br>" +
 			"Багатий вибір начинок – від класичних до екзотичних, ми створимо торт, який підходить саме вам.</br>" +
 			"Тільки натуральні інгредієнти – безпечні та якісні продукти для бездоганного смаку та вигляду.</br>",
-		price: "950"
+		price: "950",
+		tikTokLink: "https://vm.tiktok.com/ZMBajRWbV"
 	},
 	wedding: {
 		image: "./assets/img/whatIOffer/modal/wedding.jpg",
@@ -51,7 +55,8 @@ export const products = {
 			"Натуральні інгредієнти – тільки якісні продукти для ніжного та повітряного смаку.</br>" +
 			"</br>" +
 			"Створю разом з вами торт, що стане солодким символом вашого кохання!",
-		price: "950"
+		price: "950",
+		tikTokLink: "https://vm.tiktok.com/ZMBa27ULA"
 	},
 	baby: {
 		image: "./assets/img/whatIOffer/modal/easter.jpg",
@@ -62,7 +67,8 @@ export const products = {
 			" декором.</br>" +
 			"Великоднє печиво – святкові пряники, прикрашені глазур’ю, стануть чудовим подарунком або частиною" +
 			" великоднього кошика.",
-		price: "250"
+		price: "250",
+		tikTokLink: "https://vm.tiktok.com/ZMBa2cP6P"
 	},
 	easter: {
 		image: "./assets/img/whatIOffer/modal/baby.jpg",
@@ -73,7 +79,8 @@ export const products = {
 			"чи яскраві тематичні десерти.</br>" +
 			"Найкращі інгредієнти – тільки натуральні продукти, безпечні для дітей.</br>" +
 			"На будь-яке свято – дні народження, хрестини, випускний у садочку чи просто особливий день.</br>",
-		price: "950"
+		price: "950",
+		tikTokLink: "https://vm.tiktok.com/ZMBajdK9k"
 	},
 	bento: {
 		image: "./assets/img/whatIOffer/modal/bento.jpg",
@@ -84,6 +91,7 @@ export const products = {
 			" побажання.</br>" +
 			"Компактний розмір – ідеальний для одного або двох, щоб зробити момент особливим.</br>" +
 			"Замовляйте бенто-торти для душевних моментів і приємних сюрпризів!",
-		price: "1100"
+		price: "1100",
+		tikTokLink: "https://vm.tiktok.com/ZMBa27493"
 	}
 };
