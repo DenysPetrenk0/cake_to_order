@@ -1,4 +1,4 @@
-export const initModalWhatIOffer = ({image, title, text, secondText, price}) => {
+export const initModalWhatIOffer = ({image, title, text, secondText, price, tikTokLink}) => {
 	const backdrop = document.querySelector(".backdrop");
 	backdrop.innerHTML = `
 	<a href="#" class="modal__close">
@@ -20,6 +20,16 @@ export const initModalWhatIOffer = ({image, title, text, secondText, price}) => 
 					</div>
 					<p class="description__price__text">без урахування декору</p>
 				</div>
+                <a
+					href=${tikTokLink}
+					class="social-links__link modal__what_i_offer__tiktok"
+					target="_blank"
+					rel="noopener noreferrer"
+                >
+					<svg class="social-links__icon">
+						<use href="./assets/icon/sprite.svg#tiktok"></use>
+					</svg>
+                </a>
 			</div>
 			<div class="modal__image__box">
 				<img class="modal__image" src="${image}" alt="${title}">			
