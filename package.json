@@ -20,5 +20,9 @@
   "homepage": "https://github.com/DenysPetrenk0/cake_to_order#readme",
   "devDependencies": {
     "sass": "^1.83.4"
+  },
+  "type": "module",
+  "dependencies": {
+    "dotenv": "^16.4.7"
   }
 }
