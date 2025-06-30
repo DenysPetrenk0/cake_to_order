@@ -72,37 +72,32 @@ export const setOrder = () => {
 			return;
 		}
 
-		const botToken = "7821261671:AAFWNRfaHrKhqmCA7DqhsM3FoXxInLbpNEE";
-		const chatId = "854901237";
 		const formData = new FormData(this);
+		const orderData = {
+			name: formData.get('name'),
+			last_name: formData.get('last_name'),
+			contact: formData.get('contact'),
+			communication: formData.get('communication'),
+			description: formData.get('description') || 'Немає'
+		};
 
-		const text = `
-		🔔 *Нове замовлення!*  
-		👤 *Ім'я:* ${formData.get('name')} ${formData.get('last_name')}  
-		📞 *Контакт:* ${formData.get('contact')}  
-		📡 *Зв'язок:* ${formData.get('communication')}  
-		📋 *Деталі:* ${formData.get('description') || 'Немає'}
-		`;
-
-		const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
-
-
-		try	{
-			const response = await fetch(url, {
-				method: 'POST',
-				headers: { 'Content-Type': 'application/json' },
-				body: JSON.stringify({ chat_id: chatId, text, parse_mode: "Markdown" })
+		try {
+			const response = await fetch("/.netlify/functions/sendOrder", {
+				method: "POST",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify(orderData)
 			});
+
+			const result = await response.json();
 
 			if (response.ok) {
 				showResModal("Замовлення відправлено успішно!");
 				this.reset();
 			} else {
-				showResModal("Помилка при відправленні. Спробуйте ще раз.");
+				showResModal(result.error || "Помилка при відправленні.");
 			}
-
 		} catch (error) {
-			showResModal("Помилка при відправленні. Спробуйте перевірити вірність заповнення усіх полів")
+			showResModal("Помилка при відправленні. Спробуйте ще раз.");
 		}
 	});
 };
