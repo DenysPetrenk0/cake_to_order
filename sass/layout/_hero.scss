@@ -37,12 +37,12 @@
   }
 
   &__title {
+    font-family: var(--shantellSans-extraBold);
     font-size: 30px;
-    line-height: 1.6;
+    line-height: 1.2;
     color: var(--prim-title-color);
     margin: 10px auto;
     text-align: center;
-    font-weight: 900;
     position: relative;
   }
 

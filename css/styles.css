@@ -1,4 +1,40 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "ShantellSans-ExtraBold";
+  src: url("../../fonts/ShantellSans-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "BalsamiqSans-Regular";
+  src: url("../../fonts/BalsamiqSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "BalsamiqSans-Bold";
+  src: url("../../fonts/BalsamiqSans-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Sansation-Regular";
+  src: url("../../fonts/Sansation-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Sansation-Bold";
+  src: url("../../fonts/Sansation-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GreatVibes-Regular";
+  src: url("../../fonts/GreatVibes-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
 :root {
   --text-second-color: #757575;
   --bg-color: #212121;
@@ -6,6 +42,12 @@
   --link-color: #2196F3;
   --title-color: #ffffff;
   --prim-title-color: #d99714;
+  --shantellSans-extraBold: "ShantellSans-ExtraBold";
+  --balsamiqSans-regular: "BalsamiqSans-Regular", sans-serif;
+  --balsamiqSans-bold: "BalsamiqSans-Bold", sans-serif;
+  --sansation-regular: "Sansation-Regular", sans-serif;
+  --sansation-bold: "Sansation-Bold", sans-serif;
+  --greatVibes-regular: "GreatVibes-Regular", cursive;
 }
 
 .container {
@@ -92,27 +134,96 @@ ul {
   width: 100%;
 }
 .header .menu_btn {
+  display: none !important;
+}
+.header .menu__nav {
+  display: flex;
+  position: fixed;
+  top: 8%;
+  left: 49%;
+  transform: translate(-50%, -50%);
+  gap: 1.57vw;
+}
+.header .menu__nav li:nth-child(4) {
+  margin-left: 10.42vw;
+}
+.header .menu__link {
+  position: relative;
+  font-family: var(--balsamiqSans-bold);
+  font-size: 1.41vw;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--title-color);
+}
+.header .menu__link:hover, .header .menu__link.active {
+  color: var(--text-second-color);
+}
+.header .menu__link:hover .menu__link__icon, .header .menu__link.active .menu__link__icon {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+.header .menu__link__icon {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  width: 2.61vw;
+  height: 2.61vw;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: -1;
+}
+.header .menu__btn {
   background: transparent;
   border: none;
   position: absolute;
   left: 80%;
   top: 20px;
 }
-.header .menu_btn:focus .menu_btn__icon {
+.header .menu__btn:focus .menu__btn__icon {
   scale: 1.1;
 }
-.header .menu_btn__icon {
+.header .menu__btn__icon {
   fill: var(--prim-title-color);
   width: 40px;
   height: 40px;
+}
+.header .contact {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  gap: 10px;
+}
+.header .contact__menu__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--balsamiqSans-regular);
+  font-size: 30px;
+  line-height: 1.14;
+  gap: 10px;
+  color: var(--title-color);
+}
+.header .contact__menu__link:hover {
+  color: var(--prim-title-color);
+}
+.header .contact__menu__link:hover .menu__contact__link__icon {
+  fill: var(--prim-title-color);
+}
+.header .contact__menu__link__icon {
+  width: 34px;
+  height: 34px;
+  fill: var(--title-color);
 }
 .header .navbar {
   display: block;
 }
 .header .navbar__logo {
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: 10.42vw;
+  height: 10.42vw;
   left: 1%;
   top: 1%;
 }
@@ -130,94 +241,7 @@ ul {
     left: 46%;
     top: 9px;
   }
-  .header .menu_btn {
-    display: none !important;
-  }
-  .header .menu__nav {
-    display: flex;
-    position: fixed;
-    top: 60px;
-    left: 48%;
-    transform: translate(-50%, -50%);
-  }
-  .header .menu__nav li + li {
-    margin-left: 30px;
-  }
-  .header .menu__nav li:nth-child(4) {
-    margin-left: 120px;
-  }
-  .header .menu__link {
-    position: relative;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1.14;
-    text-transform: uppercase;
-    color: var(--title-color);
-  }
-  .header .menu__link:hover, .header .menu__link.active {
-    color: var(--text-second-color);
-  }
-  .header .menu__link:hover .menu__link__icon, .header .menu__link.active .menu__link__icon {
-    opacity: 1;
-    transform: translate(-50%, -7px);
-  }
-  .header .menu__link__icon {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -20px);
-    width: 25px;
-    height: 25px;
-    opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    z-index: -1;
-  }
-  .header .menu__contact {
-    margin-right: 10px;
-  }
-  .header .menu__contact__link {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1.14;
-    color: var(--title-color);
-  }
-  .header .menu__contact__link:hover {
-    color: var(--prim-title-color);
-  }
-  .header .menu__contact__link:hover .menu__contact__link__icon {
-    fill: var(--prim-title-color);
-  }
-  .header .menu__contact__link__icon {
-    width: 17px;
-    height: 17px;
-    fill: var(--title-color);
-    margin-right: 5px;
-  }
-  .header .contact {
-    display: flex;
-    position: fixed;
-    top: 92%;
-    right: 3%;
-  }
 }
-@media screen and (min-width: 1200px) {
-  .header .menu__contact {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-  .header .contact {
-    display: block;
-    position: fixed;
-    top: 50px;
-    right: 50px;
-  }
-}
-
 .hero {
   position: relative;
   max-width: 100%;
@@ -253,12 +277,12 @@ ul {
   padding-bottom: 200px;
 }
 .hero__title {
+  font-family: var(--shantellSans-extraBold);
   font-size: 30px;
-  line-height: 1.6;
+  line-height: 1.2;
   color: var(--prim-title-color);
   margin: 10px auto;
   text-align: center;
-  font-weight: 900;
   position: relative;
 }
 .hero__sub__title {
