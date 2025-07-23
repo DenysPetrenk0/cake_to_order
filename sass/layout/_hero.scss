@@ -1,12 +1,12 @@
 .hero {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   max-width: 100%;
   background: var(--bg-second-color);
   z-index: 1;
-  background-size: cover;
-  background-position: center;
   transition: background-image 1s ease-in-out;
-
   &::before {
     content: "";
     position: absolute;
@@ -19,109 +19,142 @@
     opacity: 1;
     transition: opacity 1s ease-in-out;
   }
-
   &.fade::before {
     opacity: 0;
   }
-
   &__background-video {
-    display: none;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
-
   &__container {
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    padding-top: 200px;
-    padding-bottom: 200px;
+    align-items: center;
   }
-
   &__title {
-    font-size: 30px;
-    line-height: 1.6;
+    font-family: var(--shantellSans-extraBold);
+    font-size: 3.65vw;
+    line-height: 1.2;
     color: var(--prim-title-color);
-    margin: 10px auto;
     text-align: center;
-    font-weight: 900;
     position: relative;
   }
-
   &__sub__title {
-    margin: auto;
     text-align: center;
-    font-size: 15px;
+    font-family: var(--balsamiqSans-bold);
+    font-size: 1.25vw;
     line-height: 1.2;
     font-weight: bold;
     color: var(--title-color);
-
+    margin-top: 0.52vw;
+    margin-bottom: 1.56vw;
     .hero  & {
       position: relative;
     }
   }
-
   &__hashtag {
-
     &__container {
       position: fixed;
-      bottom: 35px;
-      left: 20px;
-      font-size: 15px;
-      font-weight: 900;
-      line-height: 1.14;
-    }
-
-    &__text {
-      color: var(--prim-title-color);
-    }
-  }
-
-  &__icon {
-    width: 70px;
-    height: 70px;
-  }
-
-  @media screen and (min-width: 768px) {
-    &__title {
-      font-size: 50px;
-    }
-  }
-
-  @media screen and (min-width: 1200px) {
-    &__background-video {
-      display: block;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    &__container {
+      bottom: 2%;
+      left: 2%;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
+      .social-links {
+        &__list {
+          padding: 0;
+        }
+        &__link:hover .social-links__icon,
+        &__link:focus .social-links__icon {
+          fill: var(--title-color);
+        }
+        &__icon {
+          fill: var(--prim-title-color);
+        }
+      }
     }
+    &__text {
+      font-size: 0.83vw;
+      font-family: var(--balsamiqSans-bold);
+      line-height: 1.14;
+      color: var(--prim-title-color);
+      padding-left: 0.36vw;
+    }
+  }
+  &__content {
+    margin: 0 10.42vw;
+  }
+  &__icon {
+    width: 7.82vw;
+    height: 7.82vw;
+    position: relative;
+    z-index: 1;
+  }
 
+  @media screen and (max-width: 1561px) {
     &__title {
-      font-size: 60px;
-      margin: 30px auto;
+      font-size: 4.52vw;
     }
-
     &__sub__title {
-      font-size: 36px;
+      font-size: 1.67vw;
     }
-
-    &__content {
-      margin: 0 100px;
+    &__hashtag {
+      &__text {
+        font-size: 1.12vw;
+      }
     }
+  }
 
+  @media screen and (max-width: 1024px) {
+    &__background-video {
+      display: none;
+    }
+    &__title {
+      font-size: 6.51vw;
+    }
+    &__sub__title {
+      font-size: 2.7vw;
+      margin-top: 2.7vw;
+      margin-bottom: 6.51vw;
+    }
+    &__hashtag {
+      &__text {
+        font-size: 1.12vw;
+      }
+    }
     &__icon {
-      width: 150px;
-      height: 150px;
-      position: relative;
-      z-index: 1;
+      width: 13.02vw;
+      height: 13.02vw;
+    }
+    &__hashtag {
+      &__text {
+        font-size: 2.1vw;
+      }
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    &__icon {
+      display: none;
+    }
+    &__title {
+      font-size: 12.4vw;
+    }
+    &__sub__title {
+      font-size: 4.8vw;
+      margin-top: 2vw;
+      margin-bottom: 12vw;
+    }
+    &__hashtag {
+      &__text {
+        font-size: 4.8vw;
+      }
     }
   }
 }

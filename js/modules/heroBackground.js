@@ -3,13 +3,13 @@ let index = 0;
 const bgContainer = document.querySelector("#AboutIntro");
 
 export function changeBackground() {
-	if (window.innerWidth > 768) return;
+	if (window.innerWidth > 1024) return;
 
 	const nextIndex = (index + 1) % images.length;
 	const nextImage = images[nextIndex];
 
 	bgContainer.style.setProperty("--prev-image", `url(${images[index]})`);
-	bgContainer.style.backgroundImage = `url(${nextImage})`;
+	bgContainer.style.background = `url(${nextImage}) no-repeat center center/cover`;
 
 	bgContainer.classList.add("fade");
 
