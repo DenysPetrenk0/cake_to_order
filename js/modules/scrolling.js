@@ -2,6 +2,8 @@ export function initSmoothScroll() {
 	const sections = document.querySelectorAll(".section, footer");
 	const navLinks = document.querySelectorAll(".menu__link");
 	const backdrop = document.querySelector(".backdrop");
+	const downUpBtn = document.querySelector('#downUpScroll');
+	const hashtag = document.querySelector(".hero__hashtag__container");
 	let isScrolling = false;
 
 	document.addEventListener("wheel", (event) => {
@@ -31,6 +33,25 @@ export function initSmoothScroll() {
 		}, 800);
 	}, { passive: false });
 
+	if (downUpBtn) {
+		downUpBtn.addEventListener("click", () => {
+			if (isScrolling) return;
+
+			let currentIndex = [...sections].findIndex(
+				(section) => Math.abs(section.getBoundingClientRect().top) < window.innerHeight / 2
+			);
+
+			let targetIndex = currentIndex < sections.length - 1 ? currentIndex + 1 : 0;
+
+			isScrolling = true;
+			sections[targetIndex].scrollIntoView({ behavior: "smooth" });
+
+			setTimeout(() => {
+				isScrolling = false;
+			}, 800);
+		});
+	}
+
 	const observer = new IntersectionObserver((entries) => {
 		entries.forEach((entry) => {
 			if (entry.isIntersecting) {
@@ -41,7 +62,18 @@ export function initSmoothScroll() {
 				if (activeLink) {
 					activeLink.classList.add("active");
 				}
-				document.querySelector(".hero__hashtag__container").style.display = id === "Contact" ? "none" : "block";
+				if (id === "Contact") {
+					hashtag.style.display = "none";
+					downUpBtn.classList.remove("down-up");
+					downUpBtn.classList.add("up-down");
+					downUpBtn.textContent = "нагору"
+				} else {
+					hashtag.style.display = "block";
+					downUpBtn.classList.add("down-up");
+					downUpBtn.classList.remove("up-down");
+					downUpBtn.textContent = "наступний"
+				}
+
 			}
 		});
 		},
