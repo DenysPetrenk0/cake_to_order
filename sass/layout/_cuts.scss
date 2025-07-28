@@ -1,20 +1,72 @@
 .cuts {
   background: var(--bg-second-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   .container {
-    padding-top: 120px;
+    position: relative;
+    width: 100%;
   }
-
+  &__list {
+    display: flex;
+    justify-content: center;
+    height: 40.31vw;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    pointer-events: none;
+  }
   &__item {
-    margin-bottom: 50px;
+    position: absolute;
     border: 3px solid var(--prim-title-color);
     border-radius: 0 30px;
+    transition: all 1s ease, transform 1s ease;
+    transform-style: preserve-3d;
     overflow: hidden;
-
-    img {
-      height: 80vh;
+    &.start-prev {
+      transform: rotateX(0deg) rotateY(-20deg) scale(0.9);
+      top: 0;
+      left: 3vw;
     }
-
+    &.start-active {
+      transform: none;
+      top: 0;
+      z-index: 1;
+      opacity: 1;
+    }
+    &.start-next {
+      transform: rotateX(0deg) rotateY(20deg) scale(0.9);
+      top: 0;
+      left: 66vw;
+    }
+    &.active {
+      transform: rotate(0) scale(1) translateX(-50%);
+      opacity: 1;
+      pointer-events: auto;
+      left: 50%;
+      z-index: 1;
+    }
+    &.prev {
+      transform: translateX(-120%) rotate(378deg);
+      opacity: 0.8;
+      left: 40vw;
+      transition-delay: 0s;
+    }
+    &.next {
+      transform: rotateY(0deg) translateX(120%) rotate(341deg);
+      opacity: 0.8;
+      left: 32vw;
+      transition-delay: 0.4s;
+    }
+    &.other {
+      transform: translateX(70%) translateY(-50%) rotate(175deg) scale(0.4);
+      opacity: 0;
+      transition-delay: 0s;
+    }
+    img {
+      width: 30vw;
+    }
     &__description {
       &__title {
         position: absolute;
@@ -27,7 +79,6 @@
         margin-bottom: 20px;
         color: var(--bg-second-color);
       }
-
       &__text {
         position: absolute;
         bottom: 5%;
@@ -124,20 +175,54 @@
       }
     }
   }
-
-  .swiper-button-next,
-  .swiper-button-prev {
-    display: none;
-  }
-  @media screen and (min-width: 768px) {
-    .swiper-button-next,
-    .swiper-button-prev {
-      display: block;
-      color: var(--title-color);
-
-      &:hover {
-        color: var(--prim-title-color);
+  &__slider {
+    &__controls {
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90vw;
+      &__btn {
+        cursor: pointer;
+        background: none;
+        border: none;
+        position: relative;
+        &:before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 1;
+          width: 3.13vw;
+          height: 3.13vw;
+          background: url("../assets/icon/down-up-arrow.svg") no-repeat center center/cover;
+        }
+        &[id=prevBtn] {
+          transform: rotate(90deg)
+        }
+        &[id=nextBtn] {
+          transform: rotate(270deg)
+        }
       }
     }
   }
+  //
+  //.swiper-button-next,
+  //.swiper-button-prev {
+  //  display: none;
+  //}
+  //@media screen and (min-width: 768px) {
+  //  .swiper-button-next,
+  //  .swiper-button-prev {
+  //    display: block;
+  //    color: var(--title-color);
+  //
+  //    &:hover {
+  //      color: var(--prim-title-color);
+  //    }
+  //  }
+  //}
 }

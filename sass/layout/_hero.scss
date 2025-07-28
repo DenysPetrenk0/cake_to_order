@@ -69,6 +69,25 @@
       .social-links {
         &__list {
           padding: 0;
+          &:hover .social-links__item {
+            animation-play-state: paused
+          }
+        }
+        &__item {
+          display: inline-block;
+          animation: bounceOnce 1.2s ease-out forwards;
+          animation-fill-mode: forwards;
+          animation-timing-function: ease-out;
+          animation-iteration-count: infinite;
+          &:nth-child(1) {
+            animation-delay: 0s;
+          }
+          &:nth-child(2) {
+            animation-delay: 1.5s;
+          }
+          &:nth-child(3) {
+            animation-delay: 3s;
+          }
         }
         &__link:hover .social-links__icon,
         &__link:focus .social-links__icon {
@@ -158,4 +177,23 @@
     }
   }
 }
+
+@keyframes bounceOnce {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-15px);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(-8px);
+  }
+  80%, 100% {
+    transform: translateY(0);
+  }
+}
+
 
