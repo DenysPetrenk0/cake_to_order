@@ -18,11 +18,8 @@ export function initSlider() {
                 }
             });
 
-            // item.firstChild.classList.add('is-hidden');
-
             if (idx === index) {
                 item.classList.add(classes[0]);
-                // item.firstChild.classList.remove('is-hidden')
             } else if (idx === nextIndex) {
                 item.classList.add(classes[1]);
             } else if (idx === prevIndex) {
@@ -52,7 +49,10 @@ export function initSlider() {
         for (let i = 0; i < itemLength; i++) {
             const span = document.createElement('span');
             span.classList.add('cuts__slider__controls__pagination__dot');
-            // pagination.append(span);
+            if (i === 0) {
+                span.classList.add('active');
+            }
+            pagination.append(span);
         }
     }
 
@@ -96,4 +96,6 @@ export function initSlider() {
         startX = 0;
         endX = 0;
     });
-};
+
+    // setInterval(() =>  updateSlider((currentIndex + 1) % items.length), 3000);
+}
