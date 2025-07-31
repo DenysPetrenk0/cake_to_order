@@ -1,16 +1,16 @@
-export function initSlider() {
-    const slider = document.querySelector('.cuts__list');
-    const items = document.querySelectorAll('.cuts__item');
-    const pagination = document.querySelector('.cuts__slider__controls__pagination');
-    const nextBtn = document.getElementById('nextBtn');
-    const prevBtn = document.getElementById('prevBtn');
+export function initSlider(name) {
+    const slider = document.querySelector(`.${name}list`);
+    const items = document.querySelectorAll(`.${name}item`);
+    const pagination = document.querySelector(`.${name}slider__controls__pagination`);
+    const nextBtn = document.getElementById(`${name}nextBtn`);
+    const prevBtn = document.getElementById(`${name}prevBtn`);
 
     let currentIndex = 1;
     const itemsLength = items.length;
 
     function addedClasses(index, nextIndex, prevIndex, classes) {
         items.forEach((item, idx) => {
-            const keepClasses = ['cuts__item'];
+            const keepClasses = [`${name}item`];
 
             item.classList.forEach(cls => {
                 if (!keepClasses.includes(cls)) {
@@ -48,7 +48,7 @@ export function initSlider() {
         const itemLength = items.length;
         for (let i = 0; i < itemLength; i++) {
             const span = document.createElement('span');
-            span.classList.add('cuts__slider__controls__pagination__dot');
+            span.classList.add(`${name}slider__controls__pagination__dot`);
             if (i === 0) {
                 span.classList.add('active');
             }
@@ -65,7 +65,7 @@ export function initSlider() {
     });
 
     addPaginationDots();
-    const dots = document.querySelectorAll('.cuts__slider__controls__pagination__dot');
+    const dots = document.querySelectorAll(`.${name}slider__controls__pagination__dot`);
 
     dots.forEach((dot, i) => {
         dot.addEventListener('click', () => {
