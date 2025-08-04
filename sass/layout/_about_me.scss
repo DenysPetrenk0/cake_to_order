@@ -3,50 +3,48 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  &__video {
-    display: none;
+  &__container {
+    display: flex;
+    flex-direction: row-reverse;
   }
-
+  &__video {
+       display: block;
+       width: 35.41vw;
+       border-radius: 0 40px;
+       border: 2px solid var(--prim-title-color);
+    &__container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+    }
+  }
   &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin-right: 3.13vw;
     &__text {
-      padding: 10px;
-
+      margin-top: 1.56vw;
+      column-count: 2;
+      column-gap: 1.56vw;
       & p {
-        font-family: "Noto Sans Display", serif;
-        font-weight: 400;
-        font-size: 13px;
+        font-size: 1.04vw;
+        font-family: var(--balsamiqSans-regular);
         line-height: 1.6;
         text-align: justify;
         color: var(--title-color);
       }
     }
   }
-
-  &__container {
-    display: flex;
-    flex-direction: row-reverse;
-  }
-
-  &__img {
-    border-radius: 10px;
-
-    &__box{
-      position: relative;
-      max-width: 75%;
-      margin: 0 auto;
-    }
-  }
-
   &__name {
-    font-size: 67px;
-    font-family: "Great Vibes", serif;
-    font-weight: 700;
-    font-style: italic;
-    letter-spacing: 0.06em;
-    line-height: 1.1;
+    font-size: 4.69vw;
+    font-family: var(--greatVibes-regular);
+    letter-spacing: 0.6vw;
+    line-height: 0.9;
     color: var(--prim-title-color);
-
     &__box  {
       position: absolute;
       top: 62%;
@@ -55,68 +53,89 @@
       text-align: center;
     }
   }
-
-  @media screen and (min-width: 480px) {
-    &__content {
-      &__text {
-        & p {
-          font-size: 15px;
-        }
-      }
-    }
-  }
-
-  @media screen and (min-width: 768px) {
-    &__content {
+  &__img {
+    border-radius: 2.08vw;
+    &__box{
       position: relative;
-      display: flex;
-    }
-
-    .social-links__list {
-      position: absolute;
-      right: 70%;
-      top: 110%;
+      width: 16.67vw;
     }
   }
 
-  @media screen and (min-width: 1200px) {
-       &__video {
-         display: block;
-         width: 460px;
-         border-radius: 0 30px;
-         border: 2px solid var(--prim-title-color);
-
-      &__container{
-        display: flex;
-        justify-content: center;
-        align-items: start;
-        width: 50%;
-      }
+  @media screen and (max-width: 1561px) {
+    &__video {
+      width: 30.41vw;
     }
-
-    &__content {
-      display: block;
-      width: 65%;
-      padding: 10px;
-
-      &__text {
-        padding: 10px;
-        column-count: 2;
-        column-gap: 40px;
-        & p {
-          font-size: 13px;
-        }
-      }
-    }
-
     &__img {
       &__box{
-        max-width: 225px;
+        width: 14.67vw;
       }
     }
+    &__name {
+      font-size: 3.69vw;
+    }
+    &__content {
+      &__text {
+        & p {
+          font-size: 0.9vw;
+        }
+      }
+    }
+  }
 
-    .social-links__list {
-      position: static;
+  @media screen and (max-width: 1025px) {
+    &__container {
+      justify-content: center;
+    }
+    &__video {
+      &__container {
+        display: none;
+      }
+    }
+    &__img {
+      &__box{
+        width: 32vw;
+      }
+    }
+    &__name {
+      font-size: 10vw;
+    }
+    &__content {
+      margin: 0 5.21vw;
+      width: 100%;
+      &__text {
+        margin-top: 3.91vw;
+        column-gap: 3.91vw;
+        & p {
+          font-size: 2vw;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    &__img {
+      &__box{
+        width: 50vw;
+      }
+    }
+    &__name {
+      font-size: 21vw;
+      &__box {
+        top: 58%;
+      }
+    }
+    &__content {
+      .social-links__list {
+        display: none;
+      }
+      margin: 0 5.33vw;
+      &__text {
+        column-count: 1;
+        margin-top: 5.33vw;
+        & p {
+          font-size: 2.8vw;
+        }
+      }
     }
   }
 }

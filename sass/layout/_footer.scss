@@ -5,35 +5,50 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
   &__hashtag {
     text-align: center;
-    font-family: "Roboto Mono", serif;
-    font-size: 24px;
-    font-weight: 700;
+    font-family: var(--shantellSans-extraBold);
+    font-size: 1.25vw;
     text-transform: uppercase;
     letter-spacing: 0.3em;
     margin-top: 30px;
     margin-bottom: 50px;
     color: var(--prim-title-color);
   }
-
   &__title {
-    font-family: "Great Vibes", serif;
-    line-height: 50px;
+    font-family: var(--greatVibes-regular);
     color: var(--title-color);
     text-align: center;
-    font-size: 34px;
+    font-size: 1.77vw;
   }
-
   .social-links__list {
     margin-bottom: 50px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (max-width: 1561px) {
     &__hashtag {
-      font-size: 30px;
+      font-size: 2.25vw;
+    }
+    &__title {
+      font-size: 2.78vw;
     }
   }
 
+  @media screen and (max-width: 1025px) {
+    &__hashtag {
+      font-size: 5.25vw;
+    }
+    &__title {
+      font-size: 5.78vw;
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    &__hashtag {
+      font-size: 6vw;
+    }
+    &__title {
+      font-size: 9vw;
+    }
+  }
 }

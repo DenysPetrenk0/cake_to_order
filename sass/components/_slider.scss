@@ -1,0 +1,114 @@
+.cuts,
+.testimonials {
+  &__slider {
+    &__controls {
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90vw;
+      &__btn {
+        cursor: pointer;
+        background: none;
+        border: none;
+        position: relative;
+        &:before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 1;
+          width: 3.13vw;
+          height: 3.13vw;
+          background: url("../assets/icon/down-up-arrow.svg") no-repeat center center/cover;
+        }
+        &:hover {
+          scale: 1.1;
+        }
+        &[id=cuts__prevBtn],
+        &[id=testimonials__prevBtn] {
+          transform: rotate(90deg)
+        }
+        &[id=cuts__nextBtn],
+        &[id=testimonials__nextBtn] {
+          transform: rotate(270deg)
+        }
+      }
+      &__pagination {
+        position: absolute;
+        left: 50%;
+        bottom: -10%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        gap: 0.5vw;
+        &__dot {
+          width: 1.56vw;
+          height: 1.56vw;
+          border-radius: 50%;
+          background: #343761;
+          opacity: 0.4;
+          z-index: 2;
+          &.active {
+            opacity: 1;
+            background: var(--prim-title-color);
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1561px) {
+    &__slider {
+      &__controls {
+        &__pagination {
+          gap: 0.5vw;
+          &__dot {
+            width: 1.1vw;
+            height: 1.1vw;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1025px) {
+    &__slider {
+      &__controls {
+        &__btn {
+          &:before {
+            width: 6vw;
+            height: 6vw;
+          }
+        }
+        &__pagination {
+          gap: 2vw;
+          &__dot {
+            width: 2vw;
+            height: 2vw;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    &__slider {
+      &__controls {
+        &__btn {
+          display: none;
+        }
+        &__pagination {
+          gap: 2vw;
+          &__dot {
+            width: 2vw;
+            height: 2vw;
+          }
+        }
+      }
+    }
+  }
+}

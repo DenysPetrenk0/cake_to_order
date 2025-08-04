@@ -5,14 +5,14 @@ import {initModalHeaderMenu} from "./modules/modalHeaderMenu.js";
 import {products} from "../data/products.js";
 import {setOrder, setupContactPlaceholder} from "./modules/form.js";
 import {startBackgroundChange} from "./modules/heroBackground.js"
-import {initTestimonialsSwiper, initCutsSwiper} from "./modules/swiper.js";
+import {initSlider} from "./modules/slider.js"
 
 document.addEventListener("DOMContentLoaded", () => {
 	initSmoothScroll();
 	setupContactPlaceholder();
 	setOrder();
-	initTestimonialsSwiper();
-	initCutsSwiper();
+	initSlider('cuts__');
+	initSlider('testimonials__');
 
 	const openModal = initModalGallery();
 	const basePath = "./assets/img/gallery/";

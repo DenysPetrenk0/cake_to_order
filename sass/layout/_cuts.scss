@@ -1,54 +1,97 @@
 .cuts {
   background: var(--bg-second-color);
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
   .container {
-    padding-top: 120px;
+    position: relative;
+    width: 100%;
   }
-
+  &__list {
+    display: flex;
+    justify-content: center;
+    height: 40.31vw;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
   &__item {
-    margin-bottom: 50px;
-    border: 3px solid var(--prim-title-color);
-    border-radius: 0 30px;
+    position: absolute;
+    border: 2px solid var(--prim-title-color);
+    border-radius: 0 40px;
+    transition: all 1s ease, transform 1s ease;
+    transform-style: preserve-3d;
     overflow: hidden;
-
-    img {
-      height: 80vh;
+    &.start-prev {
+      transform: rotateX(0deg) rotateY(-20deg) scale(0.9);
+      top: 0;
+      left: 3vw;
+      pointer-events: none;
     }
-
+    &.start-active {
+      transform: none;
+      top: 0;
+      z-index: 1;
+      opacity: 1;
+    }
+    &.start-next {
+      transform: rotateX(0deg) rotateY(20deg) scale(0.9);
+      top: 0;
+      left: 66vw;
+      pointer-events: none;
+    }
+    &.active {
+      transform: rotate(0) translateX(-50%);
+      opacity: 1;
+      left: 50%;
+      z-index: 1;
+    }
+    &.prev {
+      transform: translateX(-120%) rotateY(-20deg) scale(0.9);
+      left: 40vw;
+      pointer-events: none;
+    }
+    &.next {
+      transform: rotateX(0deg) rotateY(20deg) scale(0.9);
+      left: 66vw;
+      pointer-events: none;
+    }
+    &.other {
+      transform: scale(0.3);
+      opacity: 0;
+      pointer-events: none;
+    }
+    img {
+      width: 30vw;
+    }
     &__description {
       &__title {
         position: absolute;
-        bottom: 65%;
-        left: 6%;
-        font-family: "Great Vibes", serif;
-        font-size: 60px;
-        font-weight: 700;
-        letter-spacing: 0.1em;
-        margin-bottom: 20px;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: var(--greatVibes-regular);
+        font-size: 3.13vw;
+        letter-spacing: 0.5vw;
         color: var(--bg-second-color);
       }
-
       &__text {
         position: absolute;
         bottom: 5%;
         left: 0;
         color: var(--title-color);
-        font-family: "Noto Sans Display", serif;
-        font-weight: 400;
-        font-size: 22px;
+        font-family: var(--balsamiqSans-regular);
+        font-size: 1.41vw;
         line-height: 1.6;
         text-align: justify;
-        padding: 20px;
+        padding: 20px 40px;
       }
-
       &.honey,
-      &.napoleon,
       &.snickers {
         h3 {
           bottom: 74%;
         }
       }
-
       &.lavender,
       &.oreo {
         h3 {
@@ -56,27 +99,18 @@
           bottom: 74%;
         }
       }
-
       &.lavender-orange-peach {
         h3 {
-          font-size: 39px;
           color: var(--title-color);
           bottom: 74%;
         }
       }
-
-      &.raspberry-raffaello {
+      &.raspberry-raffaello,
+      &.napoleon {
         h3 {
           color: var(--title-color);
         }
       }
-
-      &.orange-tiramisu {
-        h3 {
-          font-size: 58px;
-        }
-      }
-
       &.tenderness {
         h3 {
           bottom: 74%;
@@ -84,60 +118,147 @@
         }
         p {
           color: var(--bg-second-color);
-          font-weight: 600;
         }
       }
-
-      &.pistachio {
-        h3 {
-          font-size: 46px;
-        }
-      }
-
       &.chocolate-raspberry {
         h3 {
           color: var(--title-color);
         }
-
         p {
           color: var(--bg-second-color);
         }
       }
     }
-
     &__link {
       position: absolute;
       top: 2%;
       right: 2%;
       border-radius: 50%;
       background: var(--bg-second-color) !important;
-
+      animation: 2s infinite scale-btn linear 1.6s;
       .social-links__icon {
         width: 25px;
         height: 25px;
       }
-
       &:hover {
         background: var(--title-color) !important;
         scale: 1.1;
         transition: background-color, scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        animation-play-state: paused;
       }
     }
   }
 
-  .swiper-button-next,
-  .swiper-button-prev {
-    display: none;
-  }
-  @media screen and (min-width: 768px) {
-    .swiper-button-next,
-    .swiper-button-prev {
-      display: block;
-      color: var(--title-color);
+  @media screen and (max-width: 1561px) {
+    &__list {
+      height: 33vw;
+    }
+    &__item {
+      img {
+        width: 24vw;
+      }
+      &__description {
+        &__title {
+          font-size: 2.7vw;
+          letter-spacing: 0.5vw;
+        }
 
-      &:hover {
-        color: var(--prim-title-color);
+        &__text {
+          font-size: 1.1vw;
+          padding: 20px 40px;
+        }
+      }
+      &.start-prev {
+        left: 13vw;
+      }
+      &.start-next {
+        left: 63vw;
+      }
+      &.prev {
+        left: 43vw;
+      }
+      &.next {
+        left: 63vw;
       }
     }
+  }
+
+  @media screen and (max-width: 1025px) {
+    &__list {
+      height: 84vw;
+    }
+    &__item {
+      img {
+        width: 62vw;
+      }
+      &__description {
+        &__title {
+          font-size: 7vw;
+          letter-spacing: 0.5vw;
+        }
+        &__text {
+          font-size: 3vw;
+        }
+      }
+      &.active {
+        transform: none;
+        left: auto;
+      }
+      &.start-prev {
+        opacity: 0;
+      }
+      &.start-next {
+        opacity: 0;
+      }
+      &.prev {
+        opacity: 0;
+      }
+      &.next {
+        opacity: 0;
+      }
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    &__list {
+      height: 100vw;
+    }
+    &__item {
+      img {
+        width: 74vw;
+      }
+      &__description {
+        &__title {
+          font-size: 9vw;
+          letter-spacing: 0.9vw;
+        }
+        &__text {
+          font-size: 3vw;
+          padding: 10px 20px;
+        }
+      }
+    }
+    &__item__link.social-links__link {
+      top: 4%;
+      right: 4%;
+      width: 34px;
+      height: 34px;
+      .social-links__icon {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+@keyframes scale-btn {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
   }
 }
