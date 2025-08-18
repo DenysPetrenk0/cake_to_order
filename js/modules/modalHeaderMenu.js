@@ -1,6 +1,8 @@
 export const initModalHeaderMenu = () => {
-	const backdrop = document.querySelector(".backdrop");
-	backdrop.innerHTML = `
+	const backDrop = document.querySelector(".backdrop");
+	const menuBtn = document.querySelector("#menuBtn");
+
+	backDrop.innerHTML = `
 		<a href="#" class="modal__close">
 			<svg class="modal__icon">
 				<use href="./assets/icon/sprite.svg#cross"></use>
@@ -40,23 +42,37 @@ export const initModalHeaderMenu = () => {
             </ul>
 	`;
 
+	const closeBtn = backDrop.querySelector(".modal__close");
+
 	const closeMenu = () => {
-		backdrop.classList.add("is-hidden");
-		document.querySelector("#menuBtn").style.display = "block";
-		backdrop.classList.remove("modal__menu");
-		backdrop.innerHTML = "";
+		closeBtn.classList.add("flip-hide");
+		closeBtn.addEventListener("animationend", () => {
+			backDrop.classList.add("is-hidden");
+			menuBtn.classList.add("flip-show");
+			backDrop.innerHTML = "";
+		}, { once: true });
+		menuBtn.addEventListener("animationend", () => {
+			backDrop.classList.add("is-hidden");
+			backDrop.classList.remove("modal__menu");
+			backDrop.innerHTML = "";
+			menuBtn.classList.remove("flip-show");
+			menuBtn.style.opacity = "1";
+		}, { once: true });
 	};
 
-	document.querySelector("#menuBtn").style.display = "none";
-	backdrop.classList.remove("is-hidden");
-	backdrop.classList.add("modal__menu");
+	backDrop.classList.remove("is-hidden");
+	backDrop.classList.add("modal__menu");
+	closeBtn.classList.add("flip-show");
+	closeBtn.addEventListener("animationend", () => {
+		closeBtn.classList.remove("flip-show");
+	}, { once: true });
 
-	backdrop.querySelector(".modal__close").addEventListener("click", (event) => {
+	backDrop.querySelector(".modal__close").addEventListener("click", (event) => {
 		event.preventDefault();
 		closeMenu();
 	});
 
-	backdrop.querySelectorAll(".modal__link").forEach(link => {
+	backDrop.querySelectorAll(".modal__link").forEach(link => {
 		link.addEventListener("click", () => {
 			closeMenu();
 		});
