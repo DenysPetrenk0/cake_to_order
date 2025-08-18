@@ -4,7 +4,7 @@
   width: 100%;
   .menu {
     &__btn {
-      display: none;
+      opacity: 0;
     }
     &__nav {
       display: flex;
@@ -92,7 +92,7 @@
   @media screen and (max-width: 1561px) {
     .menu {
       &__btn {
-        display: none;
+        opacity: 0;
       }
       &__nav {
         top: 8%;
@@ -130,7 +130,7 @@
   @media screen and (max-width: 1024px) {
     .menu {
       &__btn {
-        display: none;
+        opacity: 0;
       }
       &__nav {
         top: 6%;
@@ -184,12 +184,13 @@
         display: none;
       }
       &__btn {
-        display: block;
+        opacity: 1;
         background: transparent;
         border: none;
         position: fixed;
         right: 4%;
         top: 2%;
+        transition: all 0.3s ease;
         &:focus .menu_btn__icon {
           scale: 1.1;
         }

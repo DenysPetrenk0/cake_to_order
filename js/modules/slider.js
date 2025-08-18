@@ -97,5 +97,5 @@ export function initSlider(name) {
         endX = 0;
     });
 
-    // setInterval(() =>  updateSlider((currentIndex + 1) % items.length), 3000);
+    setInterval(() =>  updateSlider((currentIndex + 1) % items.length), 3000);
 }

@@ -9,7 +9,6 @@ export const initModalGallery = () => {
 	function openModal(imgArray, index) {
 		images = imgArray;
 		currentIndex = index;
-
 		backDrop.innerHTML = `
 			<a href="#" class="modal__close">
 				<svg class="modal__icon">
@@ -21,16 +20,10 @@ export const initModalGallery = () => {
 					<img class="modal__image modal__gallery__img" src="${images[currentIndex]}" alt="Gallery Image">			
 				</div>
 			</div>
-			<a href="#" class="modal__prev">
-				<svg class="modal__icon">
-					<use href="./assets/icon/sprite.svg#arrow"></use>
-				</svg>
-			</a>
-				<a href="#" class="modal__next">
-				<svg class="modal__icon">
-					<use href="./assets/icon/sprite.svg#arrow"></use>
-				</svg>
-			</a>
+			<div class="modal__gallery__control">
+				<button class="modal__prev"></button>
+				<button class="modal__next"></button>
+			</div>
 		`;
 
 		backDrop.classList.remove("is-hidden");
@@ -39,11 +32,25 @@ export const initModalGallery = () => {
 		const closeButton = backDrop.querySelector(".modal__close");
 		const prevButton = backDrop.querySelector(".modal__prev");
 		const nextButton = backDrop.querySelector(".modal__next");
+		const menuBtn = document.querySelector("#menuBtn");
+
+		closeButton.classList.add("flip-show");
+		closeButton.addEventListener("animationend", () => {
+			closeButton.classList.remove("flip-show");
+		}, { once: true });
 
 		function closeModal(event) {
 			event.preventDefault();
-			backDrop.classList.add("is-hidden");
-			backDrop.innerHTML = "";
+			closeButton.classList.add("flip-hide");
+			closeButton.addEventListener("animationend", () => {
+				backDrop.classList.add("is-hidden");
+				menuBtn.classList.add("flip-show");
+				backDrop.innerHTML = "";
+			}, { once: true });
+			menuBtn.addEventListener("animationend", () => {
+				menuBtn.classList.remove("flip-show");
+				menuBtn.style.opacity = "1";
+			}, { once: true });
 		}
 
 		function showNextImage(event) {
