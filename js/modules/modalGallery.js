@@ -44,12 +44,14 @@ export const initModalGallery = () => {
 			closeButton.classList.add("flip-hide");
 			closeButton.addEventListener("animationend", () => {
 				backDrop.classList.add("is-hidden");
-				menuBtn.classList.add("flip-show");
+				if (window.innerWidth <= 550) {
+					menuBtn.classList.add("flip-show");
+					menuBtn.addEventListener("animationend", () => {
+						menuBtn.classList.remove("flip-show");
+						menuBtn.style.opacity = "1";
+					}, { once: true });
+				}
 				backDrop.innerHTML = "";
-			}, { once: true });
-			menuBtn.addEventListener("animationend", () => {
-				menuBtn.classList.remove("flip-show");
-				menuBtn.style.opacity = "1";
 			}, { once: true });
 		}
 

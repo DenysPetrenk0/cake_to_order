@@ -56,7 +56,9 @@ export const initModalHeaderMenu = () => {
 			backDrop.classList.remove("modal__menu");
 			backDrop.innerHTML = "";
 			menuBtn.classList.remove("flip-show");
-			menuBtn.style.opacity = "1";
+			if (window.innerWidth <= 550) {
+				menuBtn.style.opacity = "1";
+			}
 		}, { once: true });
 	};
 

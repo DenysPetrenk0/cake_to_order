@@ -52,12 +52,14 @@ export const initModalWhatIOffer = ({image, title, text, secondText, price, tikT
 		closeBtn.classList.add("flip-hide");
 		closeBtn.addEventListener("animationend", () => {
 			backDrop.classList.add("is-hidden");
-			menuBtn.classList.add("flip-show");
+			if (window.innerWidth <= 550) {
+				menuBtn.classList.add("flip-show");
+				menuBtn.addEventListener("animationend", () => {
+					menuBtn.classList.remove("flip-show");
+					menuBtn.style.opacity = "1";
+				}, { once: true });
+			}
 			backDrop.innerHTML = "";
-		}, { once: true });
-		menuBtn.addEventListener("animationend", () => {
-			menuBtn.classList.remove("flip-show");
-			menuBtn.style.opacity = "1";
 		}, { once: true });
 	});
 };
