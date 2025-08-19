@@ -1,3 +1,5 @@
+import {initModalWhatIOffer} from "./modalWhatIOffer.js";
+
 export const setupContactPlaceholder = () => {
 	const selectCommunication = document.querySelector("#form_communication");
 	const inputContact = document.querySelector("#input_contact");
@@ -21,13 +23,28 @@ export const setupContactPlaceholder = () => {
 
 const closeModal = (event) => {
 	const backDrop = document.querySelector(".backdrop");
+	const menuBtn = document.querySelector("#menuBtn");
+	const closeBtn = backDrop.querySelector(".modal__close");
+
 	event.preventDefault();
-	backDrop.classList.add("is-hidden");
-	backDrop.innerHTML = "";
+	closeBtn.classList.add("flip-hide");
+	closeBtn.addEventListener("animationend", () => {
+		backDrop.classList.add("is-hidden");
+		if (window.innerWidth <= 550) {
+			menuBtn.classList.add("flip-show");
+			menuBtn.addEventListener("animationend", () => {
+				menuBtn.classList.remove("flip-show");
+				menuBtn.style.opacity = "1";
+			}, { once: true });
+		}
+		backDrop.classList.add("is-hidden");
+		backDrop.innerHTML = "";
+	}, { once: true });
 }
 
 const showResModal = (text) => {
 	const backDrop = document.querySelector(".backdrop");
+	const menuBtn = document.querySelector("#menuBtn");
 
 	backDrop.innerHTML = `
 		<a href="#" class="modal__close">
@@ -37,12 +54,28 @@ const showResModal = (text) => {
 		</a>
 		<div class="modal__alert__box">
 			<p class="modal__alert__text">${text}</p>
-			<button type="submit" id="modalCloseBtn">Добре</button>
+			<button type="submit" id="modalCloseBtn">
+				<span>Добре</span>
+			</button>
 		</div>
 	`;
-	backDrop.classList.remove("is-hidden");
+
+	if (window.innerWidth <= 550) {
+		menuBtn.classList.add("flip-hide");
+		menuBtn.addEventListener("animationend", () => {
+			menuBtn.classList.remove("flip-hide");
+			menuBtn.style.opacity = "0";
+			backDrop.classList.remove("is-hidden");
+		}, { once: true });
+	} else {
+		backDrop.classList.remove("is-hidden");
+	}
 
 	const closeBtn = backDrop.querySelector(".modal__close");
+	closeBtn.classList.add("flip-show");
+	closeBtn.addEventListener("animationend", () => {
+		closeBtn.classList.remove("flip-show");
+	}, { once: true });
 	const okBtn = backDrop.querySelector("#modalCloseBtn");
 
 	closeBtn.addEventListener("click", closeModal);

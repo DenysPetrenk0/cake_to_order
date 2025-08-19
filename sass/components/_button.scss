@@ -135,6 +135,14 @@ button:not(.menu__btn, .down-up-scroll__btn, .cuts__slider__controls__btn, .moda
 }
 
 @media screen and (max-width: 550px) {
+  button:not(.menu__btn, .down-up-scroll__btn, .cuts__slider__controls__btn, .modal__prev, .modal__next) {
+    width: 70.93vw;
+    height: 17.07vw;
+    span {
+      font-size: 5.87vw;
+      letter-spacing: 0.8vw;
+    }
+  }
   .down-up-scroll {
     &__btn {
       font-size: 2.67vw;
