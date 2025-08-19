@@ -143,24 +143,22 @@
   }
   &__alert {
     &__box{
-      height: 50vh;
-      width: 90vw;
+      height: 35vw;
+      width: 40vw;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
-      background: var(--text-second-color);
+      background: var(--bg-second-color);
       border-radius: 0 30px;
       border: 2px solid var(--prim-title-color);
     }
-
     &__text {
-      font-family: "Roboto Mono", serif;
-      font-size: 21px;
-      font-weight: 700;
+      font-family: var(--shantellSans-extraBold);
+      font-size: 1.67vw;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 100px;
+      letter-spacing: 0.2vw;
+      margin-bottom: 5.21vw;
       text-align: center;
       color: var(--prim-title-color);
     }
@@ -345,6 +343,17 @@
         height: 6vw;
       }
     }
+    &__alert {
+      &__box{
+        height: 90vw;
+        width: 80vw;
+      }
+      &__text {
+        font-size: 3.13vw;
+        letter-spacing: 0.7vw;
+        margin-bottom: 9.12vw;
+      }
+    }
   }
 
   @media screen and (max-width: 550px) {
@@ -414,17 +423,28 @@
         display: none;
       }
     }
+    &__alert {
+      &__box{
+        height: 100vw;
+        width: 90vw;
+      }
+      &__text {
+        font-size: 5.34vw;
+        letter-spacing: 1vw;
+        margin-bottom: 13.34vw;
+      }
+    }
   }
 }
 
 .flip-hide {
   transform-origin: center;
-  animation: flipDisappear 0.6s forwards;
+  animation: flipDisappear 0.4s forwards;
 }
 
 .flip-show {
   transform-origin: center;
-  animation: flipAppear 0.6s forwards;
+  animation: flipAppear 0.4s forwards;
 }
 
 @keyframes scale-btn {
